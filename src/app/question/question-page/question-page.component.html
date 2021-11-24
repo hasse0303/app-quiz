@@ -1,0 +1,42 @@
+
+<mat-card class="container" fxLayout="column" fxLayoutGap="20px">
+  <div fxLayout="row">
+    <div fxFlex=50>
+      <img style="width: 68px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png" alt="logo">
+    </div>
+    <div fxFlex fxLayoutAlign="end center">
+      <div>
+        <h2 style="font-weight: 400; font-family: cursive; margin: 0;">OOP in JavaScript</h2>
+        <i>Welcome <span style="font-weight: bold;">{{name}}</span></i>
+      </div>
+    </div>
+  </div>
+  <div fxlayout="row" fxLayoutAlign="space-around">
+    <div style="font-weight: 500;">10 Points</div>
+    <div><span style="font-family: cursive;">Question 1 of 10</span></div>
+    <div style="font-weight: 500;">15 sec ⏰</div>
+  </div>
+  <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+  <mat-card>
+    <h2>
+      1. Which is NOT an access modifier?
+    </h2>
+  </mat-card>
+  <ol>
+    <li>
+      <mat-card>PO</mat-card>
+    </li>
+    <li>
+      <mat-card>Public</mat-card>
+    </li>
+    <li>
+      <mat-card>Private</mat-card>
+    </li>
+    <li>
+      <mat-card>Protected</mat-card>
+    </li>
+
+  </ol>
+</mat-card><br>
+<button mat-raised-button [routerLink]="['/']">Back</button>
+

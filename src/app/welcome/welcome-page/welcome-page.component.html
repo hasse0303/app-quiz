@@ -1,0 +1,20 @@
+<div fxLayout="column">
+  <mat-card>
+    <h1 style="font-weight: 500;">Welcome to Quiz App</h1>
+    <p>This quiz will contains total 10 questions. Each question hold 10 points!</p>
+    <b>Role:</b>
+    <ol>
+      <li>Correct Question give you 10 points.</li>
+      <li>Incorrect Question give you -10 points.</li>
+      <li>You will have 15 sec to answer each question.</li>
+      <li>Refreshing the page with reset the quiz!</li>
+    </ol>
+    <h1 style="font-family: cursive; text-align: center;">All the best🥰</h1>
+    <mat-form-field>
+      <input type="text" matInput [formControl]='name' placeholder="Name">
+    </mat-form-field><br>
+    <button mat-flat-button color="primary" [disabled]="!name.value" [routerLink]="['/question']" (click)="setName()">Start
+      <mat-icon>arrow_circle_right</mat-icon>
+    </button>
+  </mat-card>
+</div>

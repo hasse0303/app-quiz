@@ -1,0 +1,19 @@
+.container{
+  width: 600px;
+}
+ol{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ol li{
+  margin: 10px 0;
+}
+ol li .mat-card{
+  padding: 15px;
+  font-weight: 500;
+  &:hover{
+    background-color: lightgray;
+    cursor: pointer;
+  }
+}

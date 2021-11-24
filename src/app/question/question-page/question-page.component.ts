@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuestionService } from 'src/app/service/question.service';
 
 @Component({
   selector: 'app-question-page',
@@ -8,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
 export class QuestionPageComponent implements OnInit {
 
   name: string = "";
-  constructor() { }
+  questionList: any[] =[];
+  constructor(private questionService: QuestionService) { }
 
   ngOnInit(): void {
+    this.getAllQuestion()
     this.name = localStorage.getItem("name")!;
   }
 
+  getAllQuestion() {
+    this.questionService.getQuestion().subscribe(res => {
+
+      this.questionList = res.questionList;
+      console.log(this.questionList );
+    })
+  }
 }

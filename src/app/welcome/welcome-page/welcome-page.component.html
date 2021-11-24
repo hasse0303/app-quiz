@@ -11,9 +11,9 @@
     </ol>
     <h1 style="font-family: cursive; text-align: center;">All the best🥰</h1>
     <mat-form-field>
-      <input type="text" matInput [formControl]='name' placeholder="Name">
+      <input type="text" matInput [formControl]='name' placeholder="Enter your name" autocomplete="off">
     </mat-form-field><br>
-    <button mat-flat-button color="primary" [disabled]="!name.value" [routerLink]="['/question']" (click)="setName()">Start
+    <button mat-flat-button color="primary" [disabled]="!name.value" [routerLink]="['/question']" (click)="setName()">Start a quiz
       <mat-icon>arrow_circle_right</mat-icon>
     </button>
   </mat-card>

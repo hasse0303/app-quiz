@@ -12,30 +12,20 @@
     </div>
   </div>
   <div fxlayout="row" fxLayoutAlign="space-around">
-    <div style="font-weight: 500;">10 Points</div>
-    <div><span style="font-family: cursive;">Question 2 of 10</span></div>
-    <div style="font-weight: 500;">15 sec ⏰</div>
+    <div style="font-weight: 500;">{{points}} Points</div>
+    <div><span style="font-family: cursive;">Question {{currentQuestion+1}} of {{questionList.length}}</span></div>
+    <div style="font-weight: 500;">{{counter}} sec ⏰</div>
   </div>
-  <mat-progress-bar mode="determinate" value="10"></mat-progress-bar>
+  <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
   <mat-card>
     <h2>
-      2. When sub class declares a method that has the same type of arguments as a method declared by one of its superclasses, it is termed as:
+      {{currentQuestion+1}}. {{questionList[currentQuestion]?.question}}
     </h2>
   </mat-card>
-  <ol>
-    <li>
-      <mat-card>Method overriding</mat-card>
+  <ol *ngFor='let answer of questionList[currentQuestion]?.answer'>
+    <li  (click)="answered(currentQuestion+1, answer)">
+      <mat-card>{{answer.text}}</mat-card>
     </li>
-    <li>
-      <mat-card>Method overloading</mat-card>
-    </li>
-    <li>
-      <mat-card>Operator overloading</mat-card>
-    </li>
-    <li>
-      <mat-card>Operator overriding</mat-card>
-    </li>
-
   </ol>
 </mat-card><br>
 <button mat-raised-button [routerLink]="['/']">Back</button>

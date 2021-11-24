@@ -19,9 +19,7 @@ export class QuestionPageComponent implements OnInit {
 
   getAllQuestion() {
     this.questionService.getQuestion().subscribe(res => {
-
       this.questionList = res.questionList;
-      console.log(this.questionList );
     })
   }
 }

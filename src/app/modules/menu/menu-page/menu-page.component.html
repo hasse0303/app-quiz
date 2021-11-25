@@ -1,26 +1,9 @@
-<div fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center center">
-  <div fxLayout='row' fxLayoutGap="20px" >
-    <mat-card fxLayout="column" fxLayoutAlign="center center" matRipple>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png" alt="" width="100px">
-      <h1>HTML</h1>
-    </mat-card>
-    <mat-card fxLayout="column" fxLayoutAlign="center center" matRipple>
-      <img src="https://cdn.freelogovectors.net/wp-content/uploads/2020/04/css-3-logo.png" alt="" width="100px">
-      <h1>CSS</h1>
-    </mat-card>
-    <mat-card fxLayout="column" fxLayoutAlign="center center" matRipple>
-      <img src="https://www.removeload.com/img/javascript/js.png" alt="" width="100px">
-      <h1>JAVASCRIPT</h1>
-    </mat-card>
-    <mat-card fxLayout="column" fxLayoutAlign="center center" matRipple>
-      <img src="https://miro.medium.com/max/600/0*goJuBKoyL-zZX4RB.png" alt="" width="100px">
-      <h1>OOP</h1>
+<div fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center">
+  <div fxLayout='row wrap' fxLayout.xs="column" fxLayoutAlign="space-around">
+    <mat-card *ngFor="let menu of menuList"  fxLayout="column" fxLayoutAlign="center center" matRipple (click)="goQuizType(menu.name)">
+      <img *ngIf="menu.image" src={{menu.image}} alt="" width="100px" height="100px">
+      <h1>{{menu.name}}</h1>
     </mat-card>
   </div>
-  <div fxLayout='row' fxLayoutGap="20px" >
-    <mat-card fxLayout="column" fxLayoutAlign="center center" matRipple>
-      <!-- <img src="https://miro.medium.com/max/600/0*goJuBKoyL-zZX4RB.png" alt="" width="100px"> -->
-      <h1>Coming soon...</h1>
-    </mat-card>
-  </div>
+
 </div>

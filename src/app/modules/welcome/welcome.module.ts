@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { WelcomeRoutingModule } from './welcome-routing.module';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
-import { MaterialModule } from '../shared/material/material.module';
+import { MaterialModule } from '../../shared/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 

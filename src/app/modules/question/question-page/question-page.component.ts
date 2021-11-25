@@ -22,6 +22,7 @@ export class QuestionPageComponent implements OnInit {
   public inCorrectAnswer: number = 0;
   incorrect: boolean = false;
   start: boolean = false
+  notAllow!: boolean;
   constructor(private questionService: QuestionService) { }
 
   ngOnInit(): void {
@@ -39,6 +40,7 @@ export class QuestionPageComponent implements OnInit {
     this.interval$ = interval(1000).subscribe(res => {
       this.counter--;
       if(this.counter === 0){
+      this.inCorrectAnswer++;
         this.nextQuestion();
       }
       if(this.countQu === 10){
@@ -51,16 +53,20 @@ export class QuestionPageComponent implements OnInit {
   }
   answered(currentQu: number,answer:any){
     if(answer.correct){
+      this.notAllow = true;
       this.correctAnswer++;
       setTimeout(() => {
         this.points+=10;
       this.nextQuestion();
+      this.notAllow = false;
       }, 1000);
     }else{
       this.incorrect = true;
+      this.notAllow = true;
       this.inCorrectAnswer++;
       setTimeout(() => {
         this.nextQuestion();
+        this.notAllow = false;
       }, 1000);
     }
 

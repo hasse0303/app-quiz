@@ -36,7 +36,7 @@
           {{currentQuestion+1}}. {{questionList[currentQuestion]?.question}}
         </h3>
         <ol *ngFor='let answer of questionList[currentQuestion]?.answer'>
-          <li  (click)="answered(currentQuestion+1, answer)">
+          <li (click)="answered(currentQuestion+1, answer)" >
             <mat-card appChangeBg [isCorrect]='answer.correct' [ngClass]="{'correct': answer.correct === incorrect}">
               {{answer.text}}
             </mat-card>

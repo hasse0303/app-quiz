@@ -25,6 +25,7 @@ ol li .mat-card{
   text-align: center;
 }
 .congrate{
+  font-family: cursive;
   font-size: 32px;
   color: rgb(255, 0, 128);
 }
@@ -35,4 +36,7 @@ ol li .mat-card{
 .correct{
   background-color: green;
   color: #fff;
+}
+.no-allow{
+  cursor: not-allowed;
 }

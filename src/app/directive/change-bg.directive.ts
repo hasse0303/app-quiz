@@ -11,9 +11,11 @@ export class ChangeBgDirective {
     if(this.isCorrect){
       this.render.setStyle(this.ef.nativeElement, 'background','green');
       this.render.setStyle(this.ef.nativeElement, 'color','#fff');
+      this.render.setStyle(this.ef.nativeElement, 'cursor','not-allowed');
     }else{
       this.render.setStyle(this.ef.nativeElement, 'background','red');
       this.render.setStyle(this.ef.nativeElement, 'color','#fff');
+      this.render.setStyle(this.ef.nativeElement, 'cursor','not-allowed');
     }
   }
 }

@@ -13,20 +13,21 @@ export class QuestionPageComponent implements OnInit {
   questionList: any[] =[];
   public currentQuestion: number = 0;
   public points: number = 0;
-  public counter: number = 15;
+  public counter: number = 20;
   private interval$:any;
   public progress: string = '0';
   public done: boolean = false;
   countQu: number = 0;
   public correctAnswer: number = 0;
   public inCorrectAnswer: number = 0;
+  incorrect: boolean = false;
+  start: boolean = false
   constructor(private questionService: QuestionService) { }
 
   ngOnInit(): void {
     this.getAllQuestion()
     this.name = localStorage.getItem("name")!;
     this.startCounter();
-
   }
 
   getAllQuestion() {
@@ -56,6 +57,7 @@ export class QuestionPageComponent implements OnInit {
       this.nextQuestion();
       }, 1000);
     }else{
+      this.incorrect = true;
       this.inCorrectAnswer++;
       setTimeout(() => {
         this.nextQuestion();
@@ -71,15 +73,19 @@ export class QuestionPageComponent implements OnInit {
     return this.progress;
   }
   nextQuestion() {
+    this.incorrect = false
     this.countQu = this.currentQuestion + 1;
     this.getProgress()
-    this.counter = 15;
+    this.counter = 20;
     if(this.currentQuestion < 9){
       this.currentQuestion++;
     }
     else{
       this.done = true;
     }
+  }
 
+  startAQuiz() {
+    this.start = true;
   }
 }

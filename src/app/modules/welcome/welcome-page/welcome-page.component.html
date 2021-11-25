@@ -13,7 +13,7 @@
     <mat-form-field>
       <input type="text" matInput [formControl]='name' placeholder="Enter your name" autocomplete="off">
     </mat-form-field><br>
-    <button mat-flat-button color="primary" [disabled]="!name.value" [routerLink]="['/question']" (click)="setName()">Start a quiz
+    <button mat-flat-button color="primary" [disabled]="!name.value" [routerLink]="['/menu']" (click)="setName()">Start a quiz
       <mat-icon>arrow_circle_right</mat-icon>
     </button>
   </mat-card>

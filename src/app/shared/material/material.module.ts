@@ -11,6 +11,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatRippleModule} from '@angular/material/core';
 
 const material = [
     MatButtonModule,
@@ -22,7 +23,8 @@ const material = [
     MatToolbarModule,
     MatFormFieldModule,
     FlexLayoutModule,
-    MatDividerModule
+    MatDividerModule,
+    MatRippleModule
 ]
 
 @NgModule({

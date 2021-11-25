@@ -1,6 +1,9 @@
 .container{
   width: 600px;
 }
+.card-question{
+  padding: 10px;
+}
 ol{
   list-style-type: none;
   padding: 0;
@@ -10,7 +13,7 @@ ol li{
   margin: 10px 0;
 }
 ol li .mat-card{
-  padding: 15px;
+  padding: 10px;
   font-weight: 500;
   &:hover{
     background-color: lightgray;
@@ -22,6 +25,7 @@ ol li .mat-card{
   text-align: center;
 }
 .congrate{
+  font-size: 32px;
   color: rgb(255, 0, 128);
 }
 .result p{

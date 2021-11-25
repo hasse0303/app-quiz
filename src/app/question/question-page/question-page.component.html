@@ -28,12 +28,13 @@
       <div style="font-weight: 500;">{{counter}} sec ⏰</div>
     </div>
     <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+    <div>
+      <mat-divider></mat-divider>
+    </div>
     <ng-container *ngIf="!done">
-      <mat-card>
-        <h2>
+        <h3 style="font-weight: 500;">
           {{currentQuestion+1}}. {{questionList[currentQuestion]?.question}}
-        </h2>
-      </mat-card>
+        </h3>
         <ol *ngFor='let answer of questionList[currentQuestion]?.answer'>
           <li  (click)="answered(currentQuestion+1, answer)">
             <mat-card appChangeBg [isCorrect]='answer.correct' [ngClass]="{'correct': answer.correct === incorrect}">
@@ -42,6 +43,7 @@
           </li>
         </ol>
     </ng-container>
+
     <ng-container *ngIf="done">
       <div fxLayout="row" fxLayoutAlign='center'>
         <div fxFlex='40'>
@@ -63,7 +65,7 @@
       </div>
     </ng-container>
   </ng-container>
-
 </mat-card><br>
+
 <button mat-raised-button [routerLink]="['/']">Back</button>
 

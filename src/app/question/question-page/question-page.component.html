@@ -7,26 +7,53 @@
     <div fxFlex fxLayoutAlign="end center">
       <div>
         <h2 style="font-weight: 400; font-family: cursive; margin: 0;">Object Oriented Programming</h2>
-        <i>Welcome <span style="font-weight: bold;">{{name}}</span></i>
+        <i>Welcome <span style="font-weight: bold;">{{name}}!</span></i>
       </div>
     </div>
   </div>
   <div fxlayout="row" fxLayoutAlign="space-around">
-    <div style="font-weight: 500;">{{points}} Points</div>
+    <div style="font-weight: 500;">
+      <span *ngIf="points === 0">{{points}} point</span>
+      <span *ngIf="points !== 0">{{points}} points</span>
+    </div>
     <div><span style="font-family: cursive;">Question {{currentQuestion+1}} of {{questionList.length}}</span></div>
     <div style="font-weight: 500;">{{counter}} sec ⏰</div>
   </div>
   <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
-  <mat-card>
-    <h2>
-      {{currentQuestion+1}}. {{questionList[currentQuestion]?.question}}
-    </h2>
-  </mat-card>
-  <ol *ngFor='let answer of questionList[currentQuestion]?.answer'>
-    <li  (click)="answered(currentQuestion+1, answer)">
-      <mat-card>{{answer.text}}</mat-card>
-    </li>
-  </ol>
+  <ng-container *ngIf="!done">
+    <mat-card>
+      <h2>
+        {{currentQuestion+1}}. {{questionList[currentQuestion]?.question}}
+      </h2>
+    </mat-card>
+      <ol *ngFor='let answer of questionList[currentQuestion]?.answer'>
+        <li  (click)="answered(currentQuestion+1, answer)">
+          <mat-card appChangeBg [isCorrect]='answer.correct'>
+            {{answer.text}}
+          </mat-card>
+        </li>
+      </ol>
+  </ng-container>
+  <ng-container *ngIf="done">
+    <div fxLayout="row" fxLayoutAlign='center'>
+      <div fxFlex='40'>
+        <img *ngIf="points === 100" src="https://i.pinimg.com/originals/cf/95/d2/cf95d2d10914b09461ce0e750e4e3db1.gif" alt="" width="200">
+        <img *ngIf="points < 100 && points >=70" src="https://c.tenor.com/lPtCwpm96MUAAAAC/lopelope.gif" alt="" width="200">
+        <img *ngIf="points < 70 && points >=50" src="https://i.pinimg.com/originals/cf/76/72/cf76726963e74a3153943a1f0eb971c2.gif" alt="" width="200">
+        <img *ngIf="points < 50 && points >=20" src="https://i.gifer.com/6mD.gif" alt="" width="200">
+        <img *ngIf="points < 20" src="https://media.baamboozle.com/uploads/images/1006/1613865760_810030_gif-url.gif" alt="" width="200">
+      </div>
+      <div fxFLex class="result" >
+        <h2 class="congrate">Congratulation!!</h2>
+        <h2>You have completed the quiz.</h2>
+        <h2>Below is your result</h2>
+        <p>Total question attempted: <b>{{countQu}}</b></p>
+        <p>Total correct answer: <b>{{correctAnswer}}</b></p>
+        <p>Total incorrect answer: <b>{{inCorrectAnswer}}</b></p>
+        <p>Total score: <b>{{points}}</b></p>
+      </div>
+    </div>
+  </ng-container>
 </mat-card><br>
 <button mat-raised-button [routerLink]="['/']">Back</button>
 

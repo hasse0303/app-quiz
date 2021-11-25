@@ -15,16 +15,18 @@ export class QuestionPageComponent implements OnInit {
   public points: number = 0;
   public counter: number = 15;
   private interval$:any;
-  public progress: string = '0'
+  public progress: string = '0';
+  public done: boolean = false;
+  countQu: number = 0;
+  public correctAnswer: number = 0;
+  public inCorrectAnswer: number = 0;
   constructor(private questionService: QuestionService) { }
 
   ngOnInit(): void {
     this.getAllQuestion()
     this.name = localStorage.getItem("name")!;
     this.startCounter();
-    if(this.currentQuestion > 10){
-      this.stopCounter()
-    }
+
   }
 
   getAllQuestion() {
@@ -36,27 +38,48 @@ export class QuestionPageComponent implements OnInit {
     this.interval$ = interval(1000).subscribe(res => {
       this.counter--;
       if(this.counter === 0){
-        this.currentQuestion++;
-        this.counter = 15;
-        this.getProgress();
+        this.nextQuestion();
+      }
+      if(this.countQu === 10){
+        this.counter = 0;
+        this.stopCounter();
+
       }
 
     })
   }
   answered(currentQu: number,answer:any){
     if(answer.correct){
-      this.points+=10;
-      this.currentQuestion++;
+      this.correctAnswer++;
+      setTimeout(() => {
+        this.points+=10;
+      this.nextQuestion();
+      }, 1000);
     }else{
-      this.currentQuestion++;
+      this.inCorrectAnswer++;
+      setTimeout(() => {
+        this.nextQuestion();
+      }, 1000);
     }
 
   }
   stopCounter(){
-      this.interval$.unSubscrip();
+      this.interval$.unsubscrip();
   }
   getProgress(){
-    this.progress = (this.currentQuestion * 10).toString()
+    this.progress = (this.countQu * 10).toString()
+    return this.progress;
+  }
+  nextQuestion() {
+    this.countQu = this.currentQuestion + 1;
+    this.getProgress()
+    this.counter = 15;
+    if(this.currentQuestion < 9){
+      this.currentQuestion++;
+    }
+    else{
+      this.done = true;
+    }
 
   }
 }

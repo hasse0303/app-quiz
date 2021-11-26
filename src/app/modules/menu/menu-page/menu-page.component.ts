@@ -8,6 +8,7 @@ import { MenuService } from 'src/app/service/menu.service';
 })
 export class MenuPageComponent implements OnInit {
 
+  public isLoading: boolean = true;
   public menuList: any[] = [];
   constructor(private menuService: MenuService) { }
 

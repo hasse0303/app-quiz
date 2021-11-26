@@ -5,6 +5,7 @@ import { MenuRoutingModule } from './menu-routing.module';
 import { MenuPageComponent } from './menu-page/menu-page.component';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxContentLoadingModule } from 'ngx-content-loading';
 
 
 @NgModule({
@@ -15,8 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     MenuRoutingModule,
     MaterialModule,
-    HttpClientModule
-
+    HttpClientModule,
+    NgxContentLoadingModule
   ]
 })
 export class MenuModule { }

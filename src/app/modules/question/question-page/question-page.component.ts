@@ -15,7 +15,7 @@ export class QuestionPageComponent implements OnInit {
   questionList: any[] =[];
   public currentQuestion: number = 0;
   public points: number = 0;
-  public counter: number = 20;
+  public counter: number = 10;
   private interval$:any;
   public progress: string = '0';
   public done: boolean = false;
@@ -48,8 +48,31 @@ export class QuestionPageComponent implements OnInit {
   getQuestion() {
     this.questionService.getQuestion().subscribe(res => {
       const allQuestion = res.questionList;
-     this.questionList = allQuestion.filter((question: { type: string; }) => question.type === this.questionType)
-    })
+      const filteredQuestions = allQuestion.filter((question: { type: string; }) => question.type === this.questionType);
+      // this.questionList = filteredQuestions.reduce((result: any[], item: any) => {
+      //   const randomIndex = Math.floor(Math.random() * filteredQuestions.length);
+      //   if (!result?.includes(filteredQuestions[randomIndex]) && result?.length <= 10) {
+      //     result.push(filteredQuestions[randomIndex]);
+      //   }
+      //   return result;
+      // }, []);
+      let i = 1;
+      const result: any = [];
+      let range = 10;
+      while(i <= range) {
+        let randomItem = filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
+        if (result?.length < 10) {
+          range++;
+          i++;
+        }
+        if (!result?.includes(randomItem)) {
+          result.push(randomItem);
+          i++;
+        }
+        this.questionList = result;
+      }
+
+    });
   }
   startCounter(){
     this.interval$ = interval(1000).subscribe(res => {
@@ -58,7 +81,7 @@ export class QuestionPageComponent implements OnInit {
       this.inCorrectAnswer++;
         this.nextQuestion();
       }
-      if(this.countQu === this.questionList.length){
+      if(this.countQu === 10){
         this.counter = 0;
         this.stopCounter();
 
@@ -90,14 +113,14 @@ export class QuestionPageComponent implements OnInit {
       this.interval$.unsubscrip();
   }
   getProgress(){
-    this.progress = (this.countQu * this.questionList.length).toString()
+    this.progress = (this.countQu * 10).toString()
     return this.progress;
   }
   nextQuestion() {
     this.incorrect = false
     this.countQu = this.currentQuestion + 1;
     this.getProgress()
-    this.counter = 20;
+    this.counter = 10;
     if(this.currentQuestion < 9){
       this.currentQuestion++;
     }

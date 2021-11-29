@@ -94,21 +94,21 @@
       ]
     },
     {
-      "type": "sass",
-      "question": "Can objects of abstract classes be instantiated?",
+      "type": "oop",
+      "question": "Can overloading a method replace inheritance and polymorphism?",
       "answer": [
         {"text": "A. True"},
         {"text": "B. False", "correct": true}
       ]
     },
     {
-      "type": "css3",
-      "question": "When sub class declares a method that has the same type of arguments as a method declared by one of its superclasses, it is termed as:",
+      "type": "oop",
+      "question": "When is the method overload determined?",
       "answer": [
-        {"text": "A. Method overriding", "correct": true},
-        {"text": "B. Method overloading"},
-        {"text": "C. Operator overloading"},
-        {"text": "D. Operator overriding"}
+        {"text": "A. At the time of execution"},
+        {"text": "B. At the time of compilation", "correct": true},
+        {"text": "C. At the time of coding"},
+        {"text": "D. At the time of execution"}
       ]
     }
   ]

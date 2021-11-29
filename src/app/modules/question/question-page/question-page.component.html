@@ -24,7 +24,7 @@
         <span *ngIf="points === 0">{{points}} point</span>
         <span *ngIf="points !== 0">{{points}} points</span>
       </div>
-      <div><span style="font-family: cursive;">Question {{currentQuestion+1}} of {{questionList.length}}</span></div>
+      <div><span style="font-family: cursive;">Question {{currentQuestion+1}} of {{questionList?.length}}</span></div>
       <div style="font-weight: 500;">{{counter}} sec ⏰</div>
     </div>
     <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
@@ -67,5 +67,5 @@
   </ng-container>
 </mat-card><br>
 
-<button mat-raised-button [routerLink]="['/']">Back</button>
+<button mat-raised-button [routerLink]="['/menu']">Back</button>
 

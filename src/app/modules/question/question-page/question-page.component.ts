@@ -1,4 +1,6 @@
+import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { interval } from 'rxjs';
 import { QuestionService } from 'src/app/service/question.service';
 
@@ -23,17 +25,30 @@ export class QuestionPageComponent implements OnInit {
   incorrect: boolean = false;
   start: boolean = false
   notAllow!: boolean;
-  constructor(private questionService: QuestionService) { }
+  questionType!: string;
+  constructor(
+    private questionService: QuestionService,
+    private route: ActivatedRoute,
+
+  ) { }
 
   ngOnInit(): void {
-    this.getAllQuestion()
+    this.getQueryParams()
+    this.getQuestion()
     this.name = localStorage.getItem("name")!;
     this.startCounter();
   }
 
-  getAllQuestion() {
+  getQueryParams() {
+    this.route.queryParams.subscribe(params => {
+      this.questionType = params.type;
+    })
+  }
+
+  getQuestion() {
     this.questionService.getQuestion().subscribe(res => {
-      this.questionList = res.questionList;
+      const allQuestion = res.questionList;
+     this.questionList = allQuestion.filter((question: { type: string; }) => question.type === this.questionType)
     })
   }
   startCounter(){
@@ -43,7 +58,7 @@ export class QuestionPageComponent implements OnInit {
       this.inCorrectAnswer++;
         this.nextQuestion();
       }
-      if(this.countQu === 10){
+      if(this.countQu === this.questionList.length){
         this.counter = 0;
         this.stopCounter();
 
@@ -75,7 +90,7 @@ export class QuestionPageComponent implements OnInit {
       this.interval$.unsubscrip();
   }
   getProgress(){
-    this.progress = (this.countQu * 10).toString()
+    this.progress = (this.countQu * this.questionList.length).toString()
     return this.progress;
   }
   nextQuestion() {

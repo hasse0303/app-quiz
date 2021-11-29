@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuService } from 'src/app/service/menu.service';
 
 @Component({
@@ -10,7 +11,10 @@ export class MenuPageComponent implements OnInit {
 
   public isLoading: boolean = true;
   public menuList: any[] = [];
-  constructor(private menuService: MenuService) { }
+  constructor(
+    private menuService: MenuService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.getMenuList()
@@ -21,7 +25,7 @@ export class MenuPageComponent implements OnInit {
       this.menuList = res.menuList;
     })
   }
-  goQuizType(name:string){
-    console.log(name);
+  goQuizType(type:string){
+    this.router.navigate(['/question'], {queryParams: {type}})
   }
 }

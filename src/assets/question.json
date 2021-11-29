@@ -1,6 +1,8 @@
 {
+
   "questionList": [
     {
+      "type": "oop",
       "question": "The method with the same name or different return type and difference in the parameters either in number or type is known as:",
       "answer": [
         {"text": "A. Function overloading"},
@@ -8,6 +10,7 @@
       ]
     },
     {
+      "type": "oop",
       "question": "The process by which one object can acquire the properties of another object:",
       "answer": [
         {"text": "A. Encapsulation"},
@@ -16,6 +19,7 @@
       ]
     },
     {
+      "type": "oop",
       "question": "Constructors are used to:",
       "answer": [
         {"text": "A. To build a user interface."},
@@ -25,6 +29,7 @@
       ]
     },
     {
+      "type": "oop",
       "question": "An object that has more than one form is referred to as:",
       "answer": [
         {"text": "A. Inheritance"},
@@ -34,6 +39,7 @@
       ]
     },
     {
+      "type": "oop",
       "question": "Information Hiding can also be termed as:",
       "answer": [
         {"text": "A. Data hiding"},
@@ -42,6 +48,7 @@
       ]
     },
     {
+      "type": "oop",
       "question": "Pick the term that relates to polymorphism:",
       "answer": [
         {"text": "A. Dynamic binding", "correct": true},
@@ -51,6 +58,7 @@
       ]
     },
     {
+      "type": "oop",
       "question": "Main method can be overridden:",
       "answer": [
         {"text": "A. True"},
@@ -58,6 +66,7 @@
       ]
     },
     {
+      "type": "oop",
       "question": "The keyword which is used to access the method or member variables from the superclass:",
       "answer": [
         {"text": "A. Super", "correct": true},
@@ -67,6 +76,7 @@
       ]
     },
     {
+      "type": "oop",
       "question": "Can objects of abstract classes be instantiated?",
       "answer": [
         {"text": "A. True"},
@@ -74,6 +84,25 @@
       ]
     },
     {
+      "type": "oop",
+      "question": "When sub class declares a method that has the same type of arguments as a method declared by one of its superclasses, it is termed as:",
+      "answer": [
+        {"text": "A. Method overriding", "correct": true},
+        {"text": "B. Method overloading"},
+        {"text": "C. Operator overloading"},
+        {"text": "D. Operator overriding"}
+      ]
+    },
+    {
+      "type": "sass",
+      "question": "Can objects of abstract classes be instantiated?",
+      "answer": [
+        {"text": "A. True"},
+        {"text": "B. False", "correct": true}
+      ]
+    },
+    {
+      "type": "css3",
       "question": "When sub class declares a method that has the same type of arguments as a method declared by one of its superclasses, it is termed as:",
       "answer": [
         {"text": "A. Method overriding", "correct": true},
@@ -83,5 +112,4 @@
       ]
     }
   ]
-
 }

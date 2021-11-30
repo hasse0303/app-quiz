@@ -2,61 +2,70 @@
   "menuList": [
     {
       "id":"1",
-      "name": "html5",
-      "type": "html5",
+      "shortName": "html",
+      "fullName": "HyperText Markup Language",
+      "type": "html",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png"
     },
     {
       "id":"2",
-      "name": "css3",
-      "type": "css3",
+      "shortName": "css",
+      "fullName": "Cascading Style Sheets",
+      "type": "css",
       "image": "https://cdn.freelogovectors.net/wp-content/uploads/2020/04/css-3-logo.png"
     },
     {
       "id":"3",
-      "name": "sass",
+      "shortName": "sass",
+      "fullName": "Syntactically Awesome Style Sheets",
       "type": "sass",
       "image": "https://logos-download.com/wp-content/uploads/2016/09/Sass_logo-700x524.png"
     },
     {
       "id":"4",
-      "name": "object-oriented programming",
+      "shortName": "oop",
+      "fullName": "Object-Oriented Programming",
       "type": "oop",
       "image": "https://miro.medium.com/max/600/0*goJuBKoyL-zZX4RB.png"
     },
     {
       "id":"5",
-      "name": "javascript",
+      "shortName": "javascript",
+      "fullName": "JavaScript",
       "type": "javascript",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png"
     },
     {
       "id":"6",
-      "name": "typescript",
+      "shortName": "typescript",
+      "fullName": "TypeScript",
       "type": "typescript",
       "image": "https://iconape.com/wp-content/png_logo_vector/typescript.png"
     },
     {
       "id":"7",
-      "name": "npm",
+      "shortName": "npm",
+      "fullName": "Node Package Manager",
       "type": "npm",
       "image": "https://cdn.freebiesupply.com/logos/thumbs/2x/npm-logo.png"
     },
     {
       "id":"8",
-      "name": "node.js",
+      "shortName": "node.js",
+      "fullName": "Node.js",
       "type": "node.js",
       "image": "https://cdn.freebiesupply.com/logos/thumbs/2x/nodejs-1-logo.png"
     },
     {
       "id":"9",
-      "name": "angular",
+      "shortName": "angular",
+      "fullName": "Angular",
       "type": "angular",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png"
     },
     {
       "id":"10",
-      "name": "coming soon..."
+      "shortName": "coming soon..."
     }
   ]
 }

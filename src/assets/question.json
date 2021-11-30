@@ -5,110 +5,330 @@
       "type": "oop",
       "question": "The method with the same name or different return type and difference in the parameters either in number or type is known as:",
       "answer": [
-        {"text": "A. Function overloading"},
-        {"text": "B. Compile Time Overloading", "correct": true}
+        {"text": "Function overloading"},
+        {"text": "Compile Time Overloading", "correct": true}
       ]
     },
     {
       "type": "oop",
       "question": "The process by which one object can acquire the properties of another object:",
       "answer": [
-        {"text": "A. Encapsulation"},
-        {"text": "B. Inheritance", "correct": true},
-        {"text": "C. Polymorphism"}
+        {"text": "Encapsulation"},
+        {"text": "Inheritance", "correct": true},
+        {"text": "Polymorphism"}
       ]
     },
     {
       "type": "oop",
       "question": "Constructors are used to:",
       "answer": [
-        {"text": "A. To build a user interface."},
-        {"text": "B. Free memory."},
-        {"text": "C. Initialize a newly created object.", "correct": true},
-        {"text": "D. To create a sub-class."}
+        {"text": "To build a user interface."},
+        {"text": "Free memory."},
+        {"text": "Initialize a newly created object.", "correct": true},
+        {"text": "To create a sub-class."}
       ]
     },
     {
       "type": "oop",
       "question": "An object that has more than one form is referred to as:",
       "answer": [
-        {"text": "A. Inheritance"},
-        {"text": "B. Interface"},
-        {"text": "C. Abstract class"},
-        {"text": "D. Polymorphism", "correct": true}
+        {"text": "Inheritance"},
+        {"text": "Interface"},
+        {"text": "Abstract class"},
+        {"text": "Polymorphism", "correct": true}
       ]
     },
     {
       "type": "oop",
       "question": "Information Hiding can also be termed as:",
       "answer": [
-        {"text": "A. Data hiding"},
-        {"text": "B. Encapsulation", "correct": true},
-        {"text": "C. Inheritance"}
+        {"text": "Data hiding"},
+        {"text": "Encapsulation", "correct": true},
+        {"text": "Inheritance"}
       ]
     },
     {
       "type": "oop",
       "question": "Pick the term that relates to polymorphism:",
       "answer": [
-        {"text": "A. Dynamic binding", "correct": true},
-        {"text": "B. Dynamic allocation"},
-        {"text": "C. Static typing"},
-        {"text": "D. Static allocation"}
+        {"text": "Dynamic binding", "correct": true},
+        {"text": "Dynamic allocation"},
+        {"text": "Static typing"},
+        {"text": "Static allocation"}
       ]
     },
     {
       "type": "oop",
       "question": "Main method can be overridden:",
       "answer": [
-        {"text": "A. True"},
-        {"text": "B. False", "correct": true}
+        {"text": "True"},
+        {"text": "False", "correct": true}
       ]
     },
     {
       "type": "oop",
       "question": "The keyword which is used to access the method or member variables from the superclass:",
       "answer": [
-        {"text": "A. Super", "correct": true},
-        {"text": "B. Using"},
-        {"text": "C. Is_a"},
-        {"text": "D. Has_a"}
+        {"text": "Super", "correct": true},
+        {"text": "Using"},
+        {"text": "Is_a"},
+        {"text": "Has_a"}
       ]
     },
     {
       "type": "oop",
       "question": "Can objects of abstract classes be instantiated?",
       "answer": [
-        {"text": "A. True"},
-        {"text": "B. False", "correct": true}
+        {"text": "True"},
+        {"text": "False", "correct": true}
       ]
     },
     {
       "type": "oop",
       "question": "When sub class declares a method that has the same type of arguments as a method declared by one of its superclasses, it is termed as:",
       "answer": [
-        {"text": "A. Method overriding", "correct": true},
-        {"text": "B. Method overloading"},
-        {"text": "C. Operator overloading"},
-        {"text": "D. Operator overriding"}
+        {"text": "Method overriding", "correct": true},
+        {"text": "Method overloading"},
+        {"text": "Operator overloading"},
+        {"text": "Operator overriding"}
       ]
     },
     {
       "type": "oop",
       "question": "Can overloading a method replace inheritance and polymorphism?",
       "answer": [
-        {"text": "A. True"},
-        {"text": "B. False", "correct": true}
+        {"text": "True"},
+        {"text": "False", "correct": true}
       ]
     },
     {
       "type": "oop",
       "question": "When is the method overload determined?",
       "answer": [
-        {"text": "A. At the time of execution"},
-        {"text": "B. At the time of compilation", "correct": true},
-        {"text": "C. At the time of coding"},
-        {"text": "D. At the time of execution"}
+        {"text": "At the time of execution"},
+        {"text": "At the time of compilation", "correct": true},
+        {"text": "At the time of coding"},
+        {"text": "At the time of execution"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "What does HTML stands for?",
+      "answer": [
+        {"text": "Hypertext Machine language."},
+        {"text": "Hypertext Markup Language", "correct": true},
+        {"text": "Hypertext and links markup language"},
+        {"text": "Hightext machine language"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "How is document type initialized in HTML5.?",
+      "answer": [
+        {"text": "</DOCTYPE HTML>"},
+        {"text": "</DOCTYPE>"},
+        {"text": "<!DOCTYPE HTML>", "correct": true},
+        {"text": "</DOCTYPE html>"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "Which of the following HTML Elements is used for making any text bold ?",
+      "answer": [
+        {"text": "<p>"},
+        {"text": "<i>"},
+        {"text": "<li>"},
+        {"text": "<b>", "correct": true}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "Which of the following HTML element is used for creating an unordered list?",
+      "answer": [
+        {"text": "<ui>"},
+        {"text": "<i>"},
+        {"text": "<em>"},
+        {"text": "<ul>", "correct": true}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "Which of the following HTML element is used for creating an unordered list?",
+      "answer": [
+        {"text": "<ui>"},
+        {"text": "<i>"},
+        {"text": "<em>"},
+        {"text": "<ul>", "correct": true}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "Which of the following characters indicate closing of a tag?",
+      "answer": [
+        {"text": "."},
+        {"text": "/", "correct": true},
+        {"text": ";"},
+        {"text": "!"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "What is the font-size of the h1 heading tag?",
+      "answer": [
+        {"text": "3.5 em"},
+        {"text": "2.17 em"},
+        {"text": "2 em", "correct": true},
+        {"text": "1.5em"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "How many heading tags are there in HTML5?",
+      "answer": [
+        {"text": "2"},
+        {"text": "3"},
+        {"text": "5", "correct": true},
+        {"text": "6"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "How many attributes are there in HTML5?",
+      "answer": [
+        {"text": "2", "correct": true},
+        {"text": "4"},
+        {"text": "1"},
+        {"text": "5"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "How many attributes are there in HTML5?",
+      "answer": [
+        {"text": "2", "correct": true},
+        {"text": "4"},
+        {"text": "1"},
+        {"text": "5"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "Which of the following attributes is used to add link to any element?",
+      "answer": [
+        {"text": "link"},
+        {"text": "ref"},
+        {"text": "href", "correct": true},
+        {"text": "newref"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "Which of the following is the correct way of creating an hyperlink in HTML?",
+      "answer": [
+        {"text": "<a>www.geeksforgeeks.org <Link /a>"},
+        {"text": "<a href=“www.geeksforgeeks.org” Link /a>"},
+        {"text": "<a href= “www.geeksforgeeks.org”>Link</a>", "correct": true},
+        {"text": "<a link=“www.geeksforgeeks.org” Link> </a>"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "What is the purpose of using div tags in HTML?",
+      "answer": [
+        {"text": "For creating Different styles"},
+        {"text": "For creating different sections", "correct": true},
+        {"text": "For adding headings"},
+        {"text": "For adding titles"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "Which of the following tags is used to make a portion of text italic in HTML?",
+      "answer": [
+        {"text": "<italic>"},
+        {"text": "<style= “i”>"},
+        {"text": "<i>", "correct": true},
+        {"text": "<style=“italic”>"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "Which of the following tags is used to add a line-break in HTML?",
+      "answer": [
+        {"text": "<br>", "correct": true},
+        {"text": "<break"},
+        {"text": "</break>"},
+        {"text": "</br"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "Which of the following attributes is used to open an hyperlink in new tab?",
+      "answer": [
+        {"text": "tab"},
+        {"text": "href"},
+        {"text": "target", "correct": true},
+        {"text": "ref"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "Which of the following is the correct way to add background color in HTML?",
+      "answer": [
+        {"text": "<body color = “green”>"},
+        {"text": "<body bg-color = “green”>"},
+        {"text": "<body style = “background-color=green”>"},
+        {"text": "<body style = “background-color: green;”>", "correct": true}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "Which among the following is correct HTML code for making a checkbox?",
+      "answer": [
+        {"text": "<checkbox>"},
+        {"text": "<input type=“checkbox”>", "correct": true},
+        {"text": "<check>"},
+        {"text": "<input type=“check”>"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "Which tag is used for creating a drop-down selection list?",
+      "answer": [
+        {"text": "<select>"},
+        {"text": "<option>", "correct": true},
+        {"text": "<dropdown>"},
+        {"text": "<list>"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "Which tag is used to add an header in HTML5 table?",
+      "answer": [
+        {"text": "<theader>"},
+        {"text": "<h1>"},
+        {"text": "<th>", "correct": true},
+        {"text": "<header>"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "Which among the following is the correct way in HTML to insert an image?",
+      "answer": [
+        {"text": "<img url=“https://bit.ly/2FicgIx”>Image</img>"},
+        {"text": "<img href=“https://bit.ly/2FicgIx” alt= “Image”></img>"},
+        {"text": "<img src=“https://bit.ly/2FicgIx” alt=“Image”>", "correct": true},
+        {"text": "<image src=“https://bit.ly/2FicgIx” alt=“Image”></image>"}
+      ]
+    },
+    {
+      "type": "html",
+      "question": "Which of the following elements can be used in HTML to create a table?",
+      "answer": [
+        {"text": "<table> , <tbody> , <trow>"},
+        {"text": "<table> , <tb> , <trow>"},
+        {"text": "<table> , <tbody> , <tr>", "correct": true},
+        {"text": "All of the above"}
       ]
     }
   ]

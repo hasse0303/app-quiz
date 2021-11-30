@@ -12,14 +12,6 @@ ol{
 ol li{
   margin: 10px 0;
 }
-ol li .mat-card{
-  padding: 10px;
-  font-weight: 500;
-  &:hover{
-    background-color: lightgray;
-    cursor: pointer;
-  }
-}
 .result h2{
   margin: 0;
   text-align: center;
@@ -34,8 +26,9 @@ ol li .mat-card{
   text-align: center;
 }
 .correct{
-  background-color: green;
-  color: #fff;
+  color: green;
+  font-size: 16px;
+  font-weight: 500;
 }
 .no-allow{
   cursor: not-allowed;

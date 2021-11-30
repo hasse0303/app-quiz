@@ -2,7 +2,7 @@
   <div fxLayout='row wrap' fxLayout.xs="column" fxLayoutAlign="space-around">
     <mat-card *ngFor="let menu of menuList"  fxLayout="column" fxLayoutAlign="center center" matRipple (click)="goQuizType(menu.type)">
       <img *ngIf="menu.image" src={{menu.image}} alt="" width="100px" height="100px">
-      <h1>{{menu.name}}</h1>
+      <h1>{{menu.shortName}}</h1>
     </mat-card>
 
   </div>

@@ -1,7 +1,8 @@
-import { HttpParams } from '@angular/common/http';
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { interval } from 'rxjs';
+import { MenuService } from 'src/app/service/menu.service';
 import { QuestionService } from 'src/app/service/question.service';
 
 @Component({
@@ -11,29 +12,32 @@ import { QuestionService } from 'src/app/service/question.service';
 })
 export class QuestionPageComponent implements OnInit {
 
-  name: string = "";
-  questionList: any[] =[];
+  public name: string = "";
+  public questionList: any[] =[];
   public currentQuestion: number = 0;
   public points: number = 0;
-  public counter: number = 10;
+  public counter: number = 15;
   private interval$:any;
   public progress: string = '0';
   public done: boolean = false;
-  countQu: number = 0;
+  public countQu: number = 0;
   public correctAnswer: number = 0;
   public inCorrectAnswer: number = 0;
-  incorrect: boolean = false;
-  start: boolean = false
-  notAllow!: boolean;
-  questionType!: string;
+  public incorrect: boolean = false;
+  public start: boolean = false
+  public notAllow!: boolean;
+  public questionType!: string;
+  public menuType: any = []
   constructor(
     private questionService: QuestionService,
+    private menuService: MenuService,
     private route: ActivatedRoute,
 
   ) { }
 
   ngOnInit(): void {
     this.getQueryParams()
+    this.getMenuType()
     this.getQuestion()
     this.name = localStorage.getItem("name")!;
     this.startCounter();
@@ -45,6 +49,12 @@ export class QuestionPageComponent implements OnInit {
     })
   }
 
+  getMenuType() {
+    this.menuService.getAllmenu().subscribe(res => {
+      const menuType = res.menuList.filter((menu: { type: string; }) => menu.type === this.questionType)
+      this.menuType = menuType;
+    })
+  }
   getQuestion() {
     this.questionService.getQuestion().subscribe(res => {
       const allQuestion = res.questionList;
@@ -97,7 +107,7 @@ export class QuestionPageComponent implements OnInit {
         this.points+=10;
       this.nextQuestion();
       this.notAllow = false;
-      }, 1000);
+      }, 500);
     }else{
       this.incorrect = true;
       this.notAllow = true;
@@ -105,7 +115,7 @@ export class QuestionPageComponent implements OnInit {
       setTimeout(() => {
         this.nextQuestion();
         this.notAllow = false;
-      }, 1000);
+      }, 500);
     }
 
   }
@@ -120,7 +130,7 @@ export class QuestionPageComponent implements OnInit {
     this.incorrect = false
     this.countQu = this.currentQuestion + 1;
     this.getProgress()
-    this.counter = 10;
+    this.counter = 15;
     if(this.currentQuestion < 9){
       this.currentQuestion++;
     }
@@ -131,5 +141,9 @@ export class QuestionPageComponent implements OnInit {
 
   startAQuiz() {
     this.start = true;
+  }
+
+  quizAgain() {
+    location.reload();
   }
 }

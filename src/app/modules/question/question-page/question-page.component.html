@@ -1,12 +1,12 @@
 
 <mat-card class="container" fxLayout="column" fxLayoutGap="20px">
-  <div fxLayout="row">
-    <div fxFlex=50>
-      <img style="width: 100px;" src="https://miro.medium.com/max/600/0*goJuBKoyL-zZX4RB.png" alt="logo">
+  <div fxLayout="row" *ngFor="let menu of menuType">
+    <div fxFlex=30>
+      <img style="width: 100px;" src={{menu.image}} alt="logo">
     </div>
     <div fxFlex fxLayoutAlign="end center">
       <div>
-        <h2 style="font-weight: 400; font-family: cursive; margin: 0;">Object Oriented Programming</h2>
+        <h2 style="font-weight: 400; font-family: cursive; margin: 0;">{{menu.fullName}}</h2>
         <i>Welcome <span style="font-weight: bold;">{{name}}!</span></i>
       </div>
     </div>
@@ -14,7 +14,10 @@
   <ng-container *ngIf="!start">
     <div fxLayout="column" fxLayoutAlign="center center">
         <h1>Are you ready?</h1>
-      <button mat-raised-button color="primary" (click)="startAQuiz()">GO</button>
+      <div fxLayout="row" fxLayoutGap="10px">
+        <button mat-raised-button [routerLink]="['/menu']">Back</button>
+        <button mat-raised-button color="primary" (click)="startAQuiz()">GO</button>
+      </div>
     </div>
   </ng-container>
 
@@ -36,10 +39,8 @@
           {{currentQuestion+1}}. {{questionList[currentQuestion]?.question}}
         </h3>
         <ol *ngFor='let answer of questionList[currentQuestion]?.answer'>
-          <li (click)="answered(currentQuestion+1, answer)" >
-            <mat-card appChangeBg [isCorrect]='answer.correct' [ngClass]="{'correct': answer.correct === incorrect}">
-              {{answer.text}}
-            </mat-card>
+          <li>
+              <mat-checkbox appChangeBg [isCorrect]='answer.correct' [ngClass]="{'correct': answer.correct === incorrect}" (click)="answered(currentQuestion+1, answer)" color="primary">{{answer.text}}</mat-checkbox>
           </li>
         </ol>
     </ng-container>
@@ -63,9 +64,13 @@
           <p>Total score: <b>{{points}}</b></p>
         </div>
       </div>
+      <div fxLayout="row" fxLayoutGap="10px">
+        <button mat-raised-button [routerLink]="['/menu']">Back</button>
+      <button mat-raised-button color="primary" (click)="quizAgain()">Again</button>
+      </div>
     </ng-container>
   </ng-container>
 </mat-card><br>
 
-<button mat-raised-button [routerLink]="['/menu']">Back</button>
+
 

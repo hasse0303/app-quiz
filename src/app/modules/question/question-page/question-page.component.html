@@ -11,65 +11,92 @@
       </div>
     </div>
   </div>
-  <ng-container *ngIf="!start">
-    <div fxLayout="column" fxLayoutAlign="center center">
-        <h1>Are you ready?</h1>
-      <div fxLayout="row" fxLayoutGap="10px">
-        <button mat-raised-button [routerLink]="['/menu']">Back</button>
-        <button mat-raised-button color="primary" (click)="startAQuiz()">GO</button>
+  <ng-container *ngIf="!showResult">
+    <ng-container *ngIf="!start">
+      <div fxLayout="column" fxLayoutAlign="center center">
+          <h1>Are you ready?</h1>
+        <div fxLayout="row" fxLayoutGap="10px">
+          <button mat-raised-button [routerLink]="['/menu']">Back</button>
+          <button mat-raised-button color="primary" (click)="startAQuiz()">GO</button>
+        </div>
       </div>
-    </div>
-  </ng-container>
+    </ng-container>
 
-  <ng-container *ngIf="start">
-    <div fxlayout="row" fxLayoutAlign="space-around">
-      <div style="font-weight: 500;">
-        <span *ngIf="points === 0">{{points}} point</span>
-        <span *ngIf="points !== 0">{{points}} points</span>
+    <ng-container *ngIf="start">
+      <div fxlayout="row" fxLayoutAlign="space-around">
+        <div style="font-weight: 500;">
+          <span *ngIf="points === 0">{{points}} point</span>
+          <span *ngIf="points !== 0">{{points}} points</span>
+        </div>
+        <div><span style="font-family: cursive;">Question {{currentQuestion+1}} of {{questionList?.length}}</span></div>
+        <div style="font-weight: 500;">{{counter}} sec ⏰</div>
       </div>
-      <div><span style="font-family: cursive;">Question {{currentQuestion+1}} of {{questionList?.length}}</span></div>
-      <div style="font-weight: 500;">{{counter}} sec ⏰</div>
-    </div>
-    <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
-    <div>
-      <mat-divider></mat-divider>
-    </div>
-    <ng-container *ngIf="!done">
+      <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+      <div>
+        <mat-divider></mat-divider>
+      </div>
+      <ng-container *ngIf="!done">
+          <h3 style="font-weight: 500;">
+            {{currentQuestion+1}}. {{questionList[currentQuestion]?.question}}
+          </h3>
+          <ol *ngFor='let answer of questionList[currentQuestion]?.answer'>
+            <li>
+                <mat-checkbox appChangeBg [isCorrect]='answer.correct' [ngClass]="{'correct': answer.correct === incorrect}" (click)="answered(questionList[currentQuestion],currentQuestion+1, answer)" color="primary">{{answer.text}}</mat-checkbox>
+            </li>
+          </ol>
+      </ng-container>
+
+      <ng-container *ngIf="done">
+        <div fxLayout="row" fxLayoutAlign='center'>
+          <div fxFlex='40'>
+            <img *ngIf="points === 100" src="https://i.pinimg.com/originals/cf/95/d2/cf95d2d10914b09461ce0e750e4e3db1.gif" alt="" width="200">
+            <img *ngIf="points < 100 && points >=70" src="https://c.tenor.com/lPtCwpm96MUAAAAC/lopelope.gif" alt="" width="200">
+            <img *ngIf="points < 70 && points >=50" src="https://i.pinimg.com/originals/cf/76/72/cf76726963e74a3153943a1f0eb971c2.gif" alt="" width="200">
+            <img *ngIf="points < 50 && points >=20" src="https://i.gifer.com/6mD.gif" alt="" width="200">
+            <img *ngIf="points < 20" src="https://media.baamboozle.com/uploads/images/1006/1613865760_810030_gif-url.gif" alt="" width="200">
+          </div>
+          <div fxFLex class="result" >
+            <h2 class="congrate">Congratulation!!</h2>
+            <h2>You have completed the quiz.</h2>
+            <h2>Below is your result:</h2>
+            <p>Total question attempted: <b>{{countQu}}</b></p>
+            <p>Total correct answer: <b>{{correctAnswer}}</b></p>
+            <p>Total incorrect answer: <b>{{inCorrectAnswer}}</b></p>
+            <p>Total score: <b>{{points}}</b></p>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="10px">
+          <button mat-raised-button [routerLink]="['/menu']" matTooltip="Back to Menu">
+            <mat-icon>arrow_back</mat-icon>
+            Back
+          </button>
+          <button mat-raised-button color="primary" (click)="quizAgain()" matTooltip="Re Answer">
+            <mat-icon>refresh</mat-icon>
+            Again
+          </button>
+          <button mat-stroked-button color="primary" (click)="viewResult()" matTooltip="View Result">
+            <mat-icon>visibility</mat-icon>
+            View
+          </button>
+        </div>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+  <ng-container *ngIf="showResult">
+      <h2>You're answered: </h2>
+      <div *ngFor="let result of resultList, let i = index">
         <h3 style="font-weight: 500;">
-          {{currentQuestion+1}}. {{questionList[currentQuestion]?.question}}
+            {{i+1}}. {{result?.question}}
         </h3>
-        <ol *ngFor='let answer of questionList[currentQuestion]?.answer'>
+        <ol>
           <li>
-              <mat-checkbox appChangeBg [isCorrect]='answer.correct' [ngClass]="{'correct': answer.correct === incorrect}" (click)="answered(currentQuestion+1, answer)" color="primary">{{answer.text}}</mat-checkbox>
-          </li>
-        </ol>
-    </ng-container>
+            <mat-checkbox [ngClass]="{'correct': result?.isCorrect === true}" [checked]="true" color="primary">{{result?.answer}}</mat-checkbox>
+            </li>
+          </ol>
+      </div>
 
-    <ng-container *ngIf="done">
-      <div fxLayout="row" fxLayoutAlign='center'>
-        <div fxFlex='40'>
-          <img *ngIf="points === 100" src="https://i.pinimg.com/originals/cf/95/d2/cf95d2d10914b09461ce0e750e4e3db1.gif" alt="" width="200">
-          <img *ngIf="points < 100 && points >=70" src="https://c.tenor.com/lPtCwpm96MUAAAAC/lopelope.gif" alt="" width="200">
-          <img *ngIf="points < 70 && points >=50" src="https://i.pinimg.com/originals/cf/76/72/cf76726963e74a3153943a1f0eb971c2.gif" alt="" width="200">
-          <img *ngIf="points < 50 && points >=20" src="https://i.gifer.com/6mD.gif" alt="" width="200">
-          <img *ngIf="points < 20" src="https://media.baamboozle.com/uploads/images/1006/1613865760_810030_gif-url.gif" alt="" width="200">
-        </div>
-        <div fxFLex class="result" >
-          <h2 class="congrate">Congratulation!!</h2>
-          <h2>You have completed the quiz.</h2>
-          <h2>Below is your result:</h2>
-          <p>Total question attempted: <b>{{countQu}}</b></p>
-          <p>Total correct answer: <b>{{correctAnswer}}</b></p>
-          <p>Total incorrect answer: <b>{{inCorrectAnswer}}</b></p>
-          <p>Total score: <b>{{points}}</b></p>
-        </div>
-      </div>
-      <div fxLayout="row" fxLayoutGap="10px">
-        <button mat-raised-button [routerLink]="['/menu']">Back</button>
-      <button mat-raised-button color="primary" (click)="quizAgain()">Again</button>
-      </div>
-    </ng-container>
   </ng-container>
+
 </mat-card><br>
 
 

@@ -12,6 +12,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatRippleModule} from '@angular/material/core';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 const material = [
     MatButtonModule,
@@ -25,7 +26,8 @@ const material = [
     FlexLayoutModule,
     MatDividerModule,
     MatRippleModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatTooltipModule
 ]
 
 @NgModule({

@@ -1,5 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
+import { flush } from '@angular/core/testing';
+import { FlexAlignStyleBuilder } from '@angular/flex-layout';
 import { ActivatedRoute } from '@angular/router';
 import { interval } from 'rxjs';
 import { MenuService } from 'src/app/service/menu.service';
@@ -25,9 +27,10 @@ export class QuestionPageComponent implements OnInit {
   public inCorrectAnswer: number = 0;
   public incorrect: boolean = false;
   public start: boolean = false
-  public notAllow!: boolean;
   public questionType!: string;
-  public menuType: any = []
+  public menuType: any = [];
+  public resultList: any = [];
+  public showResult: boolean = false;
   constructor(
     private questionService: QuestionService,
     private menuService: MenuService,
@@ -36,6 +39,7 @@ export class QuestionPageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
     this.getQueryParams()
     this.getMenuType()
     this.getQuestion()
@@ -99,24 +103,23 @@ export class QuestionPageComponent implements OnInit {
 
     })
   }
-  answered(currentQu: number,answer:any){
+  answered(question: any,currentQu: number,answer:any){
     if(answer.correct){
-      this.notAllow = true;
       this.correctAnswer++;
+      this.resultList.push({"question":question?.question, "answer":answer.text, "isCorrect":true})
       setTimeout(() => {
         this.points+=10;
       this.nextQuestion();
-      this.notAllow = false;
       }, 500);
     }else{
       this.incorrect = true;
-      this.notAllow = true;
+      this.resultList.push({"question":question?.question, "answer":answer.text, "isCorrect":false})
       this.inCorrectAnswer++;
       setTimeout(() => {
         this.nextQuestion();
-        this.notAllow = false;
       }, 500);
     }
+    console.log(this.resultList);
 
   }
   stopCounter(){
@@ -145,5 +148,9 @@ export class QuestionPageComponent implements OnInit {
 
   quizAgain() {
     location.reload();
+  }
+
+  viewResult() {
+    this.showResult = true;
   }
 }

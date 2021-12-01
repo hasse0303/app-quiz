@@ -86,21 +86,22 @@
       <h2>You're answered: </h2>
       <div *ngFor="let result of resultList, let i = index">
         <h3 style="font-weight: 500;">
-            {{i+1}}. {{result?.question}}
+            {{i+1}}. {{result?.question}} (<span style="font-style: italic;" [ngClass]="{'correct': result?.isCorrect === true,'incorrect': result?.isCorrect === false}">{{result?.isCorrect ? 'Correct' : 'Incorrect'}}</span>)
         </h3>
         <ol>
           <li>
             <mat-checkbox [ngClass]="{'correct': result?.isCorrect === true,'incorrect': result?.isCorrect === false}" [checked]="result?.isCorrect === true" [indeterminate]="result?.isCorrect === false" [color]="result?.isCorrect ? 'primary' : 'warn'">{{result?.answered}}</mat-checkbox><br>
             <ng-container *ngIf="result?.isCorrect === false">
-              <mat-checkbox class="correct">
+              <mat-checkbox class="correct" [checked]="true" color="primary">
                 {{result.correctAnswer.text}}
               </mat-checkbox>
             </ng-container>
-
             </li>
           </ol>
       </div>
-
+      <button mat-button [routerLink]="['/menu']" matTooltip="Back to Menu" color="primary">
+        Back To Menu
+      </button>
   </ng-container>
 
 </mat-card><br>

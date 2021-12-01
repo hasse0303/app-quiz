@@ -41,7 +41,7 @@
           </h3>
           <ol *ngFor='let answer of questionList[currentQuestion]?.answer'>
             <li>
-                <mat-checkbox appChangeBg [isCorrect]='answer.correct' [ngClass]="{'correct': answer.correct === incorrect}" (click)="answered(questionList[currentQuestion],currentQuestion+1, answer)" color="primary">{{answer.text}}</mat-checkbox>
+                <mat-checkbox appChangeBg [isCorrect]='answer.correct' [ngClass]="{'correct': answer.correct === incorrect}" (click)="answered(questionList[currentQuestion],currentQuestion+1, answer)" [color]="answer.correct === true ? 'primary' : 'warn'">{{answer.text}}</mat-checkbox>
             </li>
           </ol>
       </ng-container>
@@ -90,7 +90,13 @@
         </h3>
         <ol>
           <li>
-            <mat-checkbox [ngClass]="{'correct': result?.isCorrect === true}" [checked]="true" color="primary">{{result?.answer}}</mat-checkbox>
+            <mat-checkbox [ngClass]="{'correct': result?.isCorrect === true,'incorrect': result?.isCorrect === false}" [checked]="result?.isCorrect === true" [indeterminate]="result?.isCorrect === false" [color]="result?.isCorrect ? 'primary' : 'warn'">{{result?.answered}}</mat-checkbox><br>
+            <ng-container *ngIf="result?.isCorrect === false">
+              <mat-checkbox class="correct">
+                {{result.correctAnswer.text}}
+              </mat-checkbox>
+            </ng-container>
+
             </li>
           </ol>
       </div>

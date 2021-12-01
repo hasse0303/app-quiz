@@ -31,6 +31,9 @@ export class QuestionPageComponent implements OnInit {
   public menuType: any = [];
   public resultList: any = [];
   public showResult: boolean = false;
+  indeterminate: boolean = false;
+  checked: boolean = false;
+  corrAnswerList: any[] = [];
   constructor(
     private questionService: QuestionService,
     private menuService: MenuService,
@@ -106,20 +109,24 @@ export class QuestionPageComponent implements OnInit {
   answered(question: any,currentQu: number,answer:any){
     if(answer.correct){
       this.correctAnswer++;
-      this.resultList.push({"question":question?.question, "answer":answer.text, "isCorrect":true})
+      this.resultList.push({"question":question?.question, "answered":answer.text, "isCorrect":true})
       setTimeout(() => {
         this.points+=10;
       this.nextQuestion();
       }, 500);
     }else{
+      // this.checked = true;
+      // this.indeterminate = true;
       this.incorrect = true;
-      this.resultList.push({"question":question?.question, "answer":answer.text, "isCorrect":false})
+      const correctAn = question.answer.find((ans: { correct: boolean; }) => ans.correct === true)
+      this.resultList.push({"question":question?.question, "answered":answer.text,"correctAnswer": correctAn,"isCorrect":false})
       this.inCorrectAnswer++;
       setTimeout(() => {
         this.nextQuestion();
       }, 500);
+      console.log(correctAn);
     }
-    console.log(this.resultList);
+    console.log(question);
 
   }
   stopCounter(){
@@ -130,6 +137,8 @@ export class QuestionPageComponent implements OnInit {
     return this.progress;
   }
   nextQuestion() {
+    this.indeterminate = false
+    this.checked = false
     this.incorrect = false
     this.countQu = this.currentQuestion + 1;
     this.getProgress()
@@ -152,5 +161,12 @@ export class QuestionPageComponent implements OnInit {
 
   viewResult() {
     this.showResult = true;
+    this.getCorrectAnswer()
+  }
+
+  getCorrectAnswer(){
+    this.corrAnswerList = this.questionList.map(que => que.answer.filter((correctAn: { correct: boolean; }) => correctAn.correct === true))
+
+    console.log(this.corrAnswerList)
   }
 }

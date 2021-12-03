@@ -37,3 +37,9 @@ ol li{
 .no-allow{
   cursor: not-allowed;
 }
+
+@media (max-width: 480px) {
+  .container {
+    width: 330px;
+  }
+}

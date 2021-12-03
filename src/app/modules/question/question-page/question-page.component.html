@@ -1,6 +1,6 @@
 
-<mat-card class="container" fxLayout="column" fxLayoutGap="20px">
-  <div fxLayout="row" *ngFor="let menu of menuType">
+<mat-card class="container" fxLayout="column" fxLayoutGap="20px" >
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="center center" *ngFor="let menu of menuType">
     <div fxFlex=30>
       <img style="width: 100px;" src={{menu.image}} alt="logo">
     </div>
@@ -47,7 +47,7 @@
       </ng-container>
 
       <ng-container *ngIf="done">
-        <div fxLayout="row" fxLayoutAlign='center'>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign='center' fxLayoutAlign.xs="center center">
           <div fxFlex='40'>
             <img *ngIf="points === 100" src="https://i.pinimg.com/originals/cf/95/d2/cf95d2d10914b09461ce0e750e4e3db1.gif" alt="" width="200">
             <img *ngIf="points < 100 && points >=70" src="https://c.tenor.com/lPtCwpm96MUAAAAC/lopelope.gif" alt="" width="200">
@@ -65,17 +65,14 @@
             <p>Total score: <b>{{points}}</b></p>
           </div>
         </div>
-        <div fxLayout="row" fxLayoutGap="10px">
+        <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign.xs="center">
           <button mat-raised-button [routerLink]="['/menu']" matTooltip="Back to Menu">
-            <mat-icon>arrow_back</mat-icon>
             Back
           </button>
           <button mat-raised-button color="primary" (click)="quizAgain()" matTooltip="Re Answer">
-            <mat-icon>refresh</mat-icon>
             Again
           </button>
           <button mat-stroked-button color="primary" (click)="viewResult()" matTooltip="View Result">
-            <mat-icon>visibility</mat-icon>
             View
           </button>
         </div>

@@ -225,10 +225,10 @@
       "type": "html",
       "question": "Which of the following is the correct way of creating an hyperlink in HTML?",
       "answer": [
-        {"text": "<a>www.geeksforgeeks.org <Link /a>"},
-        {"text": "<a href=“www.geeksforgeeks.org” Link /a>"},
-        {"text": "<a href= “www.geeksforgeeks.org”>Link</a>", "correct": true},
-        {"text": "<a link=“www.geeksforgeeks.org” Link> </a>"}
+        {"text": "<a>www.google.com <Link /a>"},
+        {"text": "<a href=“www.google.com” Link /a>"},
+        {"text": "<a href= “www.google.com”>Link</a>", "correct": true},
+        {"text": "<a link=“www.google.com” Link> </a>"}
       ]
     },
     {
@@ -273,12 +273,12 @@
     },
     {
       "type": "html",
-      "question": "Which of the following is the correct way to add background color in HTML?",
+      "question": "Which of the following is the correct way to add color in HTML?",
       "answer": [
-        {"text": "<body color = “green”>"},
+        {"text": "<body color = “green”>", "correct": true},
         {"text": "<body bg-color = “green”>"},
-        {"text": "<body style = “background-color=green”>"},
-        {"text": "<body style = “background-color: green;”>", "correct": true}
+        {"text": "<body style = “background=green”>"},
+        {"text": "<body “background-color: green;”>"}
       ]
     },
     {
@@ -315,10 +315,10 @@
       "type": "html",
       "question": "Which among the following is the correct way in HTML to insert an image?",
       "answer": [
-        {"text": "<img url=“https://bit.ly/2FicgIx”>Image</img>"},
-        {"text": "<img href=“https://bit.ly/2FicgIx” alt= “Image”></img>"},
-        {"text": "<img src=“https://bit.ly/2FicgIx” alt=“Image”>", "correct": true},
-        {"text": "<image src=“https://bit.ly/2FicgIx” alt=“Image”></image>"}
+        {"text": "<img url=“imgage.img”>Image</img>"},
+        {"text": "<img href=“imgage.img” ></img>"},
+        {"text": "<img src=“imgage.img”>", "correct": true},
+        {"text": "<image src=“imgage.img”></image>"}
       ]
     },
     {

@@ -2,3 +2,8 @@
 .mat-card{
   width: 800px;
 }
+@media (max-width: 480px) {
+  .card {
+    width: 330px;
+  }
+}

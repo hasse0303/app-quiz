@@ -330,6 +330,149 @@
         {"text": "<table> , <tbody> , <tr>", "correct": true},
         {"text": "All of the above"}
       ]
+    },
+    {
+      "type": "css",
+      "question": "What does CSS stand for?",
+      "answer": [
+        {"text": "Cascade sheets style"},
+        {"text": "Color and style sheets"},
+        {"text": "Cascading style sheets", "correct": true},
+        {"text": "Coded Style Sheet"}
+      ]
+    },
+    {
+      "type": "css",
+      "question": "Which of the below CSS properties is used to change the background color of CSS ?",
+      "answer": [
+        {"text": "background-color", "correct": true},
+        {"text": "color-background"},
+        {"text": "bg color"},
+        {"text": "color"}
+      ]
+    },
+    {
+      "type": "css",
+      "question": "Which of the below CSS class is used to change the text color of CSS ?",
+      "answer": [
+        {"text": "background-color"},
+        {"text": "color", "correct": true},
+        {"text": "color-background"},
+        {"text": "None of the above"}
+      ]
+    },
+    {
+      "type": "css",
+      "question": "Which of the below is correct syntax when we put a line over text in CSS ?",
+      "answer": [
+        {"text": "text-decoration: line"},
+        {"text": "text-decoration: none"},
+        {"text": "text-decoration: overline", "correct": true},
+        {"text": "text-decoration: underline"}
+      ]
+    },
+    {
+      "type": "css",
+      "question": "Which below property in CSS is used to set the indentation of the first line in a block of text ?",
+      "answer": [
+        {"text": "text-indent property", "correct": true},
+        {"text": "text-underlne-property"},
+        {"text": "text-decoration none"},
+        {"text": "text-overflow property"}
+      ]
+    },
+    {
+      "type": "css",
+      "question": "Which of the below CSS properties represent the order of flex items in the grid container ?",
+      "answer": [
+        {"text": "order", "correct": true},
+        {"text": "float"},
+        {"text": "overflow"},
+        {"text": "All"}
+      ]
+    },
+    {
+      "type": "css",
+      "question": "Which element is used to represent the transparency of an element in CSS ?",
+      "answer": [
+        {"text": "Hover"},
+        {"text": "Opacity", "correct": true},
+        {"text": "Transparent"},
+        {"text": "Overlay"}
+      ]
+    },
+    {
+      "type": "css",
+      "question": "Which below CSS property best describes how an image or video fits into a container ?",
+      "answer": [
+        {"text": "object-fit", "correct": true},
+        {"text": "object-move"},
+        {"text": "position-hide"},
+        {"text": "All of the above"}
+      ]
+    },
+    {
+      "type": "css",
+      "question": "Which of the below CSS property is used to set the origin of the background image in bootstraps ?",
+      "answer": [
+        {"text": "background-image"},
+        {"text": "background-origin", "correct": true},
+        {"text": "background-size"},
+        {"text": "background-fix"}
+      ]
+    },
+    {
+      "type": "css",
+      "question": "Which below function in CSS is used to perform the calculation ?",
+      "answer": [
+        {"text": "cal() function"},
+        {"text": "calculator() function"},
+        {"text": "calculate() function"},
+        {"text": "calc() function", "correct": true}
+      ]
+    },
+    {
+      "type": "css",
+      "question": "Which below the property is used to overflow the text in CSS ?",
+      "answer": [
+        {"text": "text-shadow"},
+        {"text": "text-stroke"},
+        {"text": "text-overflow", "correct": true},
+        {"text": "text-decoration"}
+      ]
+    },
+    {
+      "type": "css",
+      "question": "Which property in CSS is responsible for setting the difference between two lines ?",
+      "answer": [
+        {"text": "min-height property"},
+        {"text": "max-height property"},
+        {"text": "line-height property", "correct": true},
+        {"text": "None of the above"}
+      ]
+    },
+    {
+      "type": "css",
+      "question": "Which of the below CSS property is used to add a stroke in the text ?",
+      "answer": [
+        {"text": "text-stroke", "correct": true},
+        {"text": "text-transform"},
+        {"text": "text-decoration"},
+        {"text": "None of the above"}
+      ]
+    },
+
+
+    {
+      "type": "css",
+      "question": "How do we set the default width of the font in CSS ?",
+      "answer": [
+        {"text": "font-stretch", "correct": true},
+        {"text": "font-weight"},
+        {"text": "text-transform"},
+        {"text": "font-variant"}
+      ]
     }
+
   ]
 }

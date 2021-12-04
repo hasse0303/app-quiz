@@ -96,9 +96,14 @@
             </li>
           </ol>
       </div>
-      <button mat-button [routerLink]="['/menu']" matTooltip="Back to Menu" color="primary">
-        Back To Menu
-      </button>
+      <div fxLayout="row" fxLayoutGap="10px">
+        <button mat-stroked-button (click)="backFromView()" color="warn">
+          Back
+        </button>
+        <button mat-stroked-button [routerLink]="['/menu']" matTooltip="Back to Menu" color="primary">
+          Back To Menu
+        </button>
+      </div>
   </ng-container>
 
 </mat-card><br>

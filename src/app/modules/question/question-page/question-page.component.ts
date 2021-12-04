@@ -47,7 +47,6 @@ export class QuestionPageComponent implements OnInit {
     this.getMenuType()
     this.getQuestion()
     this.name = localStorage.getItem("name")!;
-    this.startCounter();
   }
 
   getQueryParams() {
@@ -153,10 +152,15 @@ export class QuestionPageComponent implements OnInit {
 
   startAQuiz() {
     this.start = true;
+    this.startCounter();
   }
 
   quizAgain() {
     location.reload();
+  }
+  backFromView(){
+    this.showResult = false;
+    this.done = true;
   }
 
   viewResult() {

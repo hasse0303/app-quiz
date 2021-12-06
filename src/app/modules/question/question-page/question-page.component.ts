@@ -65,13 +65,6 @@ export class QuestionPageComponent implements OnInit {
     this.questionService.getQuestion().subscribe(res => {
       const allQuestion = res.questionList;
       const filteredQuestions = allQuestion.filter((question: { type: string; }) => question.type === this.questionType);
-      // this.questionList = filteredQuestions.reduce((result: any[], item: any) => {
-      //   const randomIndex = Math.floor(Math.random() * filteredQuestions.length);
-      //   if (!result?.includes(filteredQuestions[randomIndex]) && result?.length <= 10) {
-      //     result.push(filteredQuestions[randomIndex]);
-      //   }
-      //   return result;
-      // }, []);
       let i = 1;
       const result: any = [];
       let range = 10;
@@ -114,8 +107,6 @@ export class QuestionPageComponent implements OnInit {
       this.nextQuestion();
       }, 500);
     }else{
-      // this.checked = true;
-      // this.indeterminate = true;
       this.incorrect = true;
       const correctAn = question.answer.find((ans: { correct: boolean; }) => ans.correct === true)
       this.resultList.push({"question":question?.question, "answered":answer.text,"correctAnswer": correctAn,"isCorrect":false})
@@ -123,9 +114,7 @@ export class QuestionPageComponent implements OnInit {
       setTimeout(() => {
         this.nextQuestion();
       }, 500);
-      console.log(correctAn);
     }
-    console.log(question);
 
   }
   stopCounter(){
@@ -170,7 +159,5 @@ export class QuestionPageComponent implements OnInit {
 
   getCorrectAnswer(){
     this.corrAnswerList = this.questionList.map(que => que.answer.filter((correctAn: { correct: boolean; }) => correctAn.correct === true))
-
-    console.log(this.corrAnswerList)
   }
 }

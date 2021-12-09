@@ -472,6 +472,170 @@
         {"text": "text-transform"},
         {"text": "font-variant"}
       ]
+    },
+    {
+      "type": "sass",
+      "question": "________ defines a style rule for various media types.",
+      "answer": [
+        {"text": "@media", "correct": true},
+        {"text": "@import"},
+        {"text": "@extend"},
+        {"text": "@debug"}
+      ]
+    },
+    {
+      "type": "sass",
+      "question": "Which directive is used to specify the mixin?",
+      "answer": [
+        {"text": "@include"},
+        {"text": "@mixini", "correct": true},
+        {"text": "@extend"},
+        {"text": "@debug"}
+      ]
+    },
+    {
+      "type": "sass",
+      "question": "_______ directive is a set of nested rules, which can make a style block at the document root",
+      "answer": [
+        {"text": "@media"},
+        {"text": "@at-root", "correct": true},
+        {"text": "@extend"},
+        {"text": "None of the above"}
+      ]
+    },
+    {
+      "type": "sass",
+      "question": "In ___________ directive, a variable is specified, and it contains the value of each list item.",
+      "answer": [
+        {"text": "@if"},
+        {"text": "@each", "correct": true},
+        {"text": "@for"},
+        {"text": "@while"}
+      ]
+    },
+    {
+      "type": "sass",
+      "question": "Select the directive that allows generating styles in a loop.",
+      "answer": [
+        {"text": "@if"},
+        {"text": "@each"},
+        {"text": "@for", "correct": true},
+        {"text": "@while"}
+      ]
+    },
+    {
+      "type": "sass",
+      "question": "Which of the operators below is used to provide the path for CSS stylesheets within the application?",
+      "answer": [
+        {"text": ":filename"},
+        {"text": ":load_paths"},
+        {"text": ":css_location", "correct": true},
+        {"text": ":template_location"}
+      ]
+    },
+    {
+      "type": "sass",
+      "question": "What is Rack?",
+      "answer": [
+        {"text": "Web server interface", "correct": true},
+        {"text": "Web framework"},
+        {"text": "Web application framework"},
+        {"text": "None of the above"}
+      ]
+    },
+    {
+      "type": "sass",
+      "question": "_______ is a web application framework that provides modularity and speed to Rails.",
+      "answer": [
+        {"text": "Rails"},
+        {"text": "Merb", "correct": true},
+        {"text": "Rack"},
+        {"text": "All of these"}
+      ]
+    },
+    {
+      "type": "sass",
+      "question": "_____ is an open-source web framework.",
+      "answer": [
+        {"text": "Rails", "correct": true},
+        {"text": "Merb"},
+        {"text": "Rack"},
+        {"text": "All of these"}
+      ]
+    },
+    {
+      "type": "sass",
+      "question": "Why is the @return directive used in Sass?",
+      "answer": [
+        {"text": "To define the mixin"},
+        {"text": "To include the mixin"},
+        {"text": "Return value for the function", "correct": true},
+        {"text": "None of the above"}
+      ]
+    },
+    {
+      "type": "sass",
+      "question": "Select the directive that allows generating styles in a loop.",
+      "answer": [
+        {"text": "@if"},
+        {"text": "@each"},
+        {"text": "@for", "correct": true},
+        {"text": "@while"}
+      ]
+    },
+    {
+      "type": "sass",
+      "question": "Why is the @include directive used in Sass?",
+      "answer": [
+        {"text": "To define the mixin"},
+        {"text": "To include the mixin", "correct": true},
+        {"text": "All of the above"},
+        {"text": "None of the above"}
+      ]
+    },
+    {
+      "type": "sass",
+      "question": "Select the correct way of defining a variable in Sass.",
+      "answer": [
+        {"text": "@primary-color: #888;"},
+        {"text": "%primary-color: #888;"},
+        {"text": "#primary-color: #888;"},
+        {"text": "$primary-color: #888;", "correct": true}
+      ]
+    },
+    {
+      "type": "sass",
+      "question": "To speed up the compilation of Sass files, which option is used?",
+      "answer": [
+        {"text": ":cache", "correct": true},
+        {"text": ":read_cache"},
+        {"text": ":cache_store"}
+      ]
+    },
+    {
+      "type": "sass",
+      "question": "Which of the directives below can you use to share CSS properties from a selector to another?",
+      "answer": [
+        {"text": "@extend", "correct": true},
+        {"text": "@media"},
+        {"text": "None of the above"}
+      ]
+    },
+    {
+      "type": "sass",
+      "question": "@debug directive finds errors and displays the values of SassScript expression to the error output stream.",
+      "answer": [
+        {"text": "True", "correct": true},
+        {"text": "False"}
+      ]
+    },
+    {
+      "type": "sass",
+      "question": "The SassScript values can be taken as arguments in mixins that are given when mixin is included and available as a variable within the mixin.",
+      "answer": [
+        {"text": "True", "correct": true},
+        {"text": "False"}
+      ]
     }
 
   ]

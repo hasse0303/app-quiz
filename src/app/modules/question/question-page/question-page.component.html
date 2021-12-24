@@ -6,7 +6,7 @@
     </div>
     <div fxFlex fxLayoutAlign="end center">
       <div>
-        <h2 style="font-weight: 400; font-family: cursive; margin: 0;">{{menu.fullName}}</h2>
+        <h2 style="font-weight: 400; font-family: monospace; margin: 0;">{{menu.fullName}}</h2>
         <i>Welcome <span style="font-weight: bold;">{{name}}!</span></i>
       </div>
     </div>
@@ -41,7 +41,7 @@
           </h3>
           <ol *ngFor='let answer of questionList[currentQuestion]?.answer'>
             <li>
-                <mat-checkbox appChangeBg [isCorrect]='answer.correct' [ngClass]="{'correct': answer.correct === incorrect}" (click)="answered(questionList[currentQuestion],currentQuestion+1, answer)" [color]="answer.correct === true ? 'primary' : 'warn'">{{answer.text}}</mat-checkbox>
+                <mat-card class="answer" appChangeBg [isCorrect]='answer.correct' [ngClass]="{'correct': answer.correct === incorrect}" (click)="answered(questionList[currentQuestion], answer)">{{answer.text}}</mat-card>
             </li>
           </ol>
       </ng-container>
@@ -83,13 +83,14 @@
       <h2>You're answered: </h2>
       <div *ngFor="let result of resultList, let i = index">
         <h3 style="font-weight: 500;">
-            {{i+1}}. {{result?.question}} (<span style="font-style: italic;" [ngClass]="{'correct': result?.isCorrect === true,'incorrect': result?.isCorrect === false}">{{result?.isCorrect ? 'Correct' : 'Incorrect'}}</span>)
+            {{i+1}}. {{result?.question}} (<span style="font-style: italic;" [ngClass]="{'result-correct': result?.isCorrect === true,'result-incorrect': result?.isCorrect === false}">{{result?.isCorrect ? 'Correct' : 'Incorrect'}}</span>)
         </h3>
         <ol>
           <li>
-            <mat-checkbox [ngClass]="{'correct': result?.isCorrect === true,'incorrect': result?.isCorrect === false}" [checked]="result?.isCorrect === true" [indeterminate]="result?.isCorrect === false" [color]="result?.isCorrect ? 'primary' : 'warn'">{{result?.answered}}</mat-checkbox><br>
+            <mat-checkbox [ngClass]="{'result-correct': result?.isCorrect === true,'result-incorrect': result?.isCorrect === false}" [checked]="result?.isCorrect === true" [indeterminate]="result?.isCorrect === false" [color]="result?.isCorrect ? 'primary' : 'warn'">{{result?.answered}}</mat-checkbox>
+            <br>
             <ng-container *ngIf="result?.isCorrect === false">
-              <mat-checkbox class="correct" [checked]="true" color="primary">
+              <mat-checkbox class="result-correct" [checked]="true" color="primary">
                 {{result.correctAnswer.text}}
               </mat-checkbox>
             </ng-container>

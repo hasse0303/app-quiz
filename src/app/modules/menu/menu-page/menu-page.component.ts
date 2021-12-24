@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Menu } from 'src/app/model/menu';
 import { MenuService } from 'src/app/service/menu.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { MenuService } from 'src/app/service/menu.service';
 export class MenuPageComponent implements OnInit {
 
   public isLoading: boolean = true;
-  public menuList: any[] = [];
+  public menuList: Menu[] = [];
   constructor(
     private menuService: MenuService,
     private router: Router
@@ -25,7 +26,10 @@ export class MenuPageComponent implements OnInit {
       this.menuList = res.menuList;
     })
   }
-  goQuizType(type:string){
+  goQuizType(menu:Menu){
+    if(menu.noAction) {return;}
+    const type = menu.type;
     this.router.navigate(['/question'], {queryParams: {type}})
+
   }
 }

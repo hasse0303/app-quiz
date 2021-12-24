@@ -4,6 +4,7 @@ import { flush } from '@angular/core/testing';
 import { FlexAlignStyleBuilder } from '@angular/flex-layout';
 import { ActivatedRoute } from '@angular/router';
 import { interval } from 'rxjs';
+import { Answer, Question } from 'src/app/model/question';
 import { MenuService } from 'src/app/service/menu.service';
 import { QuestionService } from 'src/app/service/question.service';
 
@@ -98,7 +99,7 @@ export class QuestionPageComponent implements OnInit {
 
     })
   }
-  answered(question: any,currentQu: number,answer:any){
+  answered(question: Question,answer:Answer){
     if(answer.correct){
       this.correctAnswer++;
       this.resultList.push({"question":question?.question, "answered":answer.text, "isCorrect":true})
@@ -108,7 +109,7 @@ export class QuestionPageComponent implements OnInit {
       }, 500);
     }else{
       this.incorrect = true;
-      const correctAn = question.answer.find((ans: { correct: boolean; }) => ans.correct === true)
+      const correctAn = question?.answer?.find((ans:Answer) => ans.correct);
       this.resultList.push({"question":question?.question, "answered":answer.text,"correctAnswer": correctAn,"isCorrect":false})
       this.inCorrectAnswer++;
       setTimeout(() => {
@@ -117,8 +118,15 @@ export class QuestionPageComponent implements OnInit {
     }
 
   }
+  // isIndeterminate(): boolean{
+  //   return this.incorrect ? true : false;
+  // }
+
+  // isChecked(): boolean{
+  //   return this.incorrect ? false : true;
+  // }
   stopCounter(){
-      this.interval$.unsubscrip();
+      this.interval$.unsubscribe();
   }
   getProgress(){
     this.progress = (this.countQu * 10).toString()

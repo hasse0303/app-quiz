@@ -1,7 +1,5 @@
 
 import { Component, OnInit } from '@angular/core';
-import { flush } from '@angular/core/testing';
-import { FlexAlignStyleBuilder } from '@angular/flex-layout';
 import { ActivatedRoute } from '@angular/router';
 import { interval } from 'rxjs';
 import { Answer, Question } from 'src/app/model/question';
@@ -35,6 +33,7 @@ export class QuestionPageComponent implements OnInit {
   indeterminate: boolean = false;
   checked: boolean = false;
   corrAnswerList: any[] = [];
+  hasAnswer!: boolean;
   constructor(
     private questionService: QuestionService,
     private menuService: MenuService,
@@ -89,7 +88,7 @@ export class QuestionPageComponent implements OnInit {
       this.counter--;
       if(this.counter === 0){
       this.inCorrectAnswer++;
-        this.nextQuestion();
+        this.nextQuestion(this.hasAnswer);
       }
       if(this.countQu === 10){
         this.counter = 0;
@@ -100,12 +99,13 @@ export class QuestionPageComponent implements OnInit {
     })
   }
   answered(question: Question,answer:Answer){
+    this.hasAnswer = true;
     if(answer.correct){
       this.correctAnswer++;
       this.resultList.push({"question":question?.question, "answered":answer.text, "isCorrect":true})
       setTimeout(() => {
         this.points+=10;
-      this.nextQuestion();
+      this.nextQuestion(this.hasAnswer);
       }, 500);
     }else{
       this.incorrect = true;
@@ -113,18 +113,11 @@ export class QuestionPageComponent implements OnInit {
       this.resultList.push({"question":question?.question, "answered":answer.text,"correctAnswer": correctAn,"isCorrect":false})
       this.inCorrectAnswer++;
       setTimeout(() => {
-        this.nextQuestion();
+        this.nextQuestion(this.hasAnswer);
       }, 500);
     }
 
   }
-  // isIndeterminate(): boolean{
-  //   return this.incorrect ? true : false;
-  // }
-
-  // isChecked(): boolean{
-  //   return this.incorrect ? false : true;
-  // }
   stopCounter(){
       this.interval$.unsubscribe();
   }
@@ -132,10 +125,16 @@ export class QuestionPageComponent implements OnInit {
     this.progress = (this.countQu * 10).toString()
     return this.progress;
   }
-  nextQuestion() {
+  nextQuestion(hasAnswer?:boolean, question?:Question) {
+    if(!hasAnswer){
+      this.resultList.push({message: 'You are not answer!'});
+      console.log(this.resultList);
+
+    }
     this.indeterminate = false
     this.checked = false
     this.incorrect = false
+    this.hasAnswer = false
     this.countQu = this.currentQuestion + 1;
     this.getProgress()
     this.counter = 20;

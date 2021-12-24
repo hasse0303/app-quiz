@@ -82,10 +82,15 @@
   <ng-container *ngIf="showResult">
       <h2>You're answered: </h2>
       <div *ngFor="let result of resultList, let i = index">
-        <h3 style="font-weight: 500;">
-            {{i+1}}. {{result?.question}} (<span style="font-style: italic;" [ngClass]="{'result-correct': result?.isCorrect === true,'result-incorrect': result?.isCorrect === false}">{{result?.isCorrect ? 'Correct' : 'Incorrect'}}</span>)
-        </h3>
-        <ol>
+        <h3 style="font-weight: 500;" >
+            <ng-container *ngIf="!result.message">
+              {{i+1}}. {{result?.question}} (<span style="font-style: italic;" [ngClass]="{'result-correct': result?.isCorrect === true,'result-incorrect': result?.isCorrect === false}">{{result?.isCorrect ? 'Correct' : 'Incorrect'}}</span>)
+            </ng-container>
+            <ng-container *ngIf="result.message">
+              {{i+1}}. <span style="color: red;">{{result?.message}}</span>
+            </ng-container>
+        </h3 >
+        <ol *ngIf="!result.message">
           <li>
             <mat-checkbox [ngClass]="{'result-correct': result?.isCorrect === true,'result-incorrect': result?.isCorrect === false}" [checked]="result?.isCorrect === true" [indeterminate]="result?.isCorrect === false" [color]="result?.isCorrect ? 'primary' : 'warn'">{{result?.answered}}</mat-checkbox>
             <br>

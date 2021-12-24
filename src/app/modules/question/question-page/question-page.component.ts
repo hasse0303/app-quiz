@@ -19,7 +19,7 @@ export class QuestionPageComponent implements OnInit {
   public questionList: any[] =[];
   public currentQuestion: number = 0;
   public points: number = 0;
-  public counter: number = 15;
+  public counter: number = 20;
   private interval$:any;
   public progress: string = '0';
   public done: boolean = false;
@@ -138,7 +138,7 @@ export class QuestionPageComponent implements OnInit {
     this.incorrect = false
     this.countQu = this.currentQuestion + 1;
     this.getProgress()
-    this.counter = 15;
+    this.counter = 20;
     if(this.currentQuestion < 9){
       this.currentQuestion++;
     }

@@ -701,6 +701,171 @@
         {"id": 1, "text": "True", "correct": true},
         {"id": 2,"text": "False"}
       ]
+    },
+    {
+      "id": 66,
+      "type": "javascript",
+      "question": "Inside which HTML element do we put the JavaScript?",
+      "answer": [
+        {"id": 1, "text": "<javascript>"},
+        {"id": 2,"text": "<js>"},
+        {"id": 3,"text": "<src>"},
+        {"id": 4,"text": "<script>", "correct": true}
+      ]
+    },
+    {
+      "id": 67,
+      "type": "javascript",
+      "question": "Where is the correct place to insert a JavaScript?",
+      "answer": [
+        {"id": 1, "text": "The head section"},
+        {"id": 2,"text": "The body section"},
+        {"id": 3,"text": "Both of the above", "correct": true},
+        {"id": 4,"text": "None of the above"}
+      ]
+    },
+    {
+      "id": 68,
+      "type": "javascript",
+      "question": "Is it necessary for the external script file to contain a <script> tag?",
+      "answer": [
+        {"id": 1, "text": "Yes"},
+        {"id": 2,"text": "No", "correct": true},
+        {"id": 3,"text": "Depends on the type of include"},
+        {"id": 4,"text": "None of the above"}
+      ]
+    },
+    {
+      "id": 69,
+      "type": "javascript",
+      "question": "What is the correct syntax for referring to an external script called 'gfg.js'?",
+      "answer": [
+        {"id": 1, "text": "<script name='gfg.js'>"},
+        {"id": 2,"text": "<script href='gfg.js'>"},
+        {"id": 3,"text": "<script src='gfg.js'>", "correct": true},
+        {"id": 4,"text": "None of the above"}
+      ]
+    },
+    {
+      "id": 70,
+      "type": "javascript",
+      "question": "How many ways are there with which we can declare a variable in javascript?",
+      "answer": [
+        {"id": 1, "text": "Only one"},
+        {"id": 2,"text": "Three", "correct": true},
+        {"id": 3,"text": "Infinitely many"},
+        {"id": 4,"text": "None of the above"}
+      ]
+    },
+    {
+      "id": 71,
+      "type": "javascript",
+      "question": "Is a variable named 'apple' same as 'Apple' in javascript?",
+      "answer": [
+        {"id": 1, "text": "Yes"},
+        {"id": 2,"text": "No", "correct": true},
+        {"id": 3,"text": "Only when we use 'strict'"},
+        {"id": 4,"text": "None of the above"}
+      ]
+    },
+    {
+      "id": 72,
+      "type": "javascript",
+      "question": "What is the type of variable data declare below const data=[]",
+      "answer": [
+        {"id": 1, "text": "Array", "correct": true},
+        {"id": 2,"text": "Object"},
+        {"id": 3,"text": "String"},
+        {"id": 4,"text": "None of the above"}
+      ]
+    },
+    {
+      "id": 73,
+      "type": "javascript",
+      "question": "Which of the following represents loops in javascript",
+      "answer": [
+        {"id": 1, "text": "for"},
+        {"id": 2,"text": "while"},
+        {"id": 3,"text": "forEach"},
+        {"id": 4,"text": "All of the above", "correct": true}
+      ]
+    },
+    {
+      "id": 74,
+      "type": "javascript",
+      "question": "An object is an unordered collection of _______.",
+      "answer": [
+        {"id": 1, "text": "value"},
+        {"id": 2,"text": "name"},
+        {"id": 3,"text": "properties", "correct": true},
+        {"id": 4,"text": "All of the above"}
+      ]
+    },
+    {
+      "id": 75,
+      "type": "javascript",
+      "question": "Which of the following method can also be used to create objects in javascript",
+      "answer": [
+        {"id": 1, "text": "new keyword"},
+        {"id": 2,"text": "object.create()"},
+        {"id": 3,"text": "create.object()"},
+        {"id": 4,"text": "Both a and b", "correct": true}
+      ]
+    },
+    {
+      "id": 76,
+      "type": "javascript",
+      "question": "Which of the following is a reference to another object from which properties are inherited",
+      "answer": [
+        {"id": 1, "text": "Object’s prototype", "correct": true},
+        {"id": 2,"text": "Object’s characteristics"},
+        {"id": 3,"text": "Object’s class"},
+        {"id": 4,"text": "All of the above"}
+      ]
+    },
+    {
+      "id": 77,
+      "type": "javascript",
+      "question": "Which of the two operator have the same syntax of writing",
+      "answer": [
+        {"id": 1, "text": "Increment and spread operator"},
+        {"id": 2,"text": "Spread operator and rest parameter()", "correct": true},
+        {"id": 3,"text": "Rest parameter and increment operator"},
+        {"id": 4,"text": "None of the above"}
+      ]
+    },
+    {
+      "id": 78,
+      "type": "javascript",
+      "question": "Which data structure is used to maintain a key-value pair in javascript",
+      "answer": [
+        {"id": 1, "text": "set"},
+        {"id": 2,"text": "array"},
+        {"id": 3,"text": "Map", "correct": true},
+        {"id": 4,"text": "String"}
+      ]
+    },
+    {
+      "id": 79,
+      "type": "javascript",
+      "question": "Which data structure in javascript is used to maintain only unique values out of the given data",
+      "answer": [
+        {"id": 1, "text": "Set", "correct": true},
+        {"id": 2,"text": "array"},
+        {"id": 3,"text": "string"},
+        {"id": 4,"text": "All of the above"}
+      ]
+    },
+    {
+      "id": 80,
+      "type": "javascript",
+      "question": "Which method is used to insert a new element at the end of an array",
+      "answer": [
+        {"id": 1, "text": "unshift()"},
+        {"id": 2,"text": "push()", "correct": true},
+        {"id": 3,"text": "pop()"},
+        {"id": 4,"text": "None of the above"}
+      ]
     }
 
   ]

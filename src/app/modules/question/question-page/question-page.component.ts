@@ -5,6 +5,9 @@ import { interval } from 'rxjs';
 import { Answer, Question } from 'src/app/model/question';
 import { MenuService } from 'src/app/service/menu.service';
 import { QuestionService } from 'src/app/service/question.service';
+import { AppLoaderService } from 'src/app/shared/app-loader/app-loader.service';
+
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-question-page',
@@ -38,7 +41,7 @@ export class QuestionPageComponent implements OnInit {
     private questionService: QuestionService,
     private menuService: MenuService,
     private route: ActivatedRoute,
-
+    private loader: AppLoaderService
   ) { }
 
   ngOnInit(): void {
@@ -62,7 +65,9 @@ export class QuestionPageComponent implements OnInit {
     })
   }
   getQuestion() {
-    this.questionService.getQuestion().subscribe(res => {
+    this.loader.open()
+    this.questionService.getQuestion()
+    .subscribe(res => {
       const allQuestion = res.questionList;
       const filteredQuestions = allQuestion.filter((question: { type: string; }) => question.type === this.questionType);
       let i = 1;
@@ -79,6 +84,9 @@ export class QuestionPageComponent implements OnInit {
           i++;
         }
         this.questionList = result;
+        setTimeout(() => {
+          this.loader.close()
+        }, 1000);
       }
 
     });

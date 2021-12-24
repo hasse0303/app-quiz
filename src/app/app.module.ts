@@ -8,10 +8,12 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { AppLoaderComponent } from './shared/app-loader/app-loader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AppLoaderComponent,
 
   ],
   imports: [

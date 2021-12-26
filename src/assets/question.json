@@ -1040,6 +1040,332 @@
         {"id": 3,"text": "type"},
         {"id": 4,"text": "declare"}
       ]
+    },
+    {
+      "id": 96,
+      "type": "node",
+      "question": "Which of the following command will show all the modules installed globally?",
+      "answer": [
+        {"id": 1, "text": "$ npm ls -g","correct": true},
+        {"id": 2,"text": "$ npm ls"},
+        {"id": 3,"text": "$ node ls -g"},
+        {"id": 4,"text": "$ node ls"}
+      ]
+    },
+    {
+      "id": 97,
+      "type": "node",
+      "question": "Is console a global object?",
+      "answer": [
+        {"id": 1, "text": "True","correct": true},
+        {"id": 2,"text": "False"}
+      ]
+    },
+    {
+      "id": 98,
+      "type": "node",
+      "question": "Which of the following command will show version of npm?",
+      "answer": [
+        {"id": 1, "text": "$ npm --version","correct": true},
+        {"id": 2,"text": "$ node --version"},
+        {"id": 3,"text": "$ npm getVersion"},
+        {"id": 4,"text": "$ node getVersion"}
+      ]
+    },
+    {
+      "id": 99,
+      "type": "node",
+      "question": "Node js is a single threaded application but supports concurrency",
+      "answer": [
+        {"id": 1, "text": "True","correct": true},
+        {"id": 2,"text": "False"}
+      ]
+    },
+    {
+      "id": 100,
+      "type": "node",
+      "question": "All APIs of Node.JS are.",
+      "answer": [
+        {"id": 1, "text": "Synchronous"},
+        {"id": 2,"text": "Asynchronous","correct": true},
+        {"id": 3,"text": "Both of the above."},
+        {"id": 4,"text": "None of the above."}
+      ]
+    },
+    {
+      "id": 101,
+      "type": "node",
+      "question": "Node.js runs on _________",
+      "answer": [
+        {"id": 1, "text": "Client"},
+        {"id": 2,"text": "Server","correct": true},
+        {"id": 3,"text": "Both of the above"},
+        {"id": 4,"text": "Browser"}
+      ]
+    },
+    {
+      "id": 102,
+      "type": "node",
+      "question": "Node.js is __________ by default",
+      "answer": [
+        {"id": 1, "text": "Synchronous","correct": true},
+        {"id": 2,"text": "Multi-threaded"},
+        {"id": 3,"text": "Asyncronous"},
+        {"id": 4,"text": "None of the above"}
+      ]
+    },
+    {
+      "id": 103,
+      "type": "node",
+      "question": "What is the default scope in Node.js application.",
+      "answer": [
+        {"id": 1, "text": "Global"},
+        {"id": 2,"text": "Local","correct": true},
+        {"id": 3,"text": "Global Function"},
+        {"id": 4,"text": "Local to object"}
+      ]
+    },
+    {
+      "id": 104,
+      "type": "node",
+      "question": "Node.js application runs on ___________",
+      "answer": [
+        {"id": 1, "text": "Multiple threads"},
+        {"id": 2,"text": "Single thread","correct": true},
+        {"id": 3,"text": "Multiple Processes"},
+        {"id": 4,"text": "Single Process"}
+      ]
+    },
+    {
+      "id": 105,
+      "type": "node",
+      "question": "The Node.js modules can be exposed using __________",
+      "answer": [
+        {"id": 1, "text": "module.expose"},
+        {"id": 2,"text": "module"},
+        {"id": 3,"text": "module.exports","correct": true},
+        {"id": 4,"text": "all of the above"}
+      ]
+    },
+    {
+      "id": 106,
+      "type": "node",
+      "question": "Which of the following core module is used to create a web server in Node.js?",
+      "answer": [
+        {"id": 1, "text": "fs"},
+        {"id": 2,"text": "ulr"},
+        {"id": 3,"text": "connect"},
+        {"id": 4,"text": "http","correct": true}
+      ]
+    },
+    {
+      "id": 107,
+      "type": "node",
+      "question": "How to import module in Node.js?",
+      "answer": [
+        {"id": 1, "text": " Using require() function","correct": true},
+        {"id": 2,"text": "Using module,import"},
+        {"id": 3,"text": "Using include() function"},
+        {"id": 4,"text": "Using app.use() function"}
+      ]
+    },
+    {
+      "id": 108,
+      "type": "node",
+      "question": "Which of the followings are valid languages for Node.js?",
+      "answer": [
+        {"id": 1, "text": "JavaScript","correct": true},
+        {"id": 2,"text": "Java"},
+        {"id": 3,"text": "C++"},
+        {"id": 4,"text": "C#"}
+      ]
+    },
+    {
+      "id": 109,
+      "type": "node",
+      "question": "Which of the following template engines can be used with Node.js?",
+      "answer": [
+        {"id": 1, "text": "Jade"},
+        {"id": 2,"text": "Vash"},
+        {"id": 3,"text": "Handlebars"},
+        {"id": 4,"text": "All of the above","correct": true}
+      ]
+    },
+    {
+      "id": 110,
+      "type": "node",
+      "question": "Node.js application can access which of the following databases?",
+      "answer": [
+        {"id": 1, "text": "No SQL database"},
+        {"id": 2,"text": "Relational database"},
+        {"id": 3,"text": "All of the above","correct": true},
+        {"id": 4,"text": "None of the above"}
+      ]
+    },
+    {
+      "id": 111,
+      "type": "angular",
+      "question": "Which of the following is correct about TypeScript?",
+      "answer": [
+        {"id": 1, "text": "Angular is based on TypeScript."},
+        {"id": 2,"text": "This is a superset of JavaScript."},
+        {"id": 3,"text": "TypeScript is maintained by Microsoft."},
+        {"id": 4,"text": "All of the above.","correct": true}
+      ]
+    },
+    {
+      "id": 112,
+      "type": "angular",
+      "question": "What is .subscribe?",
+      "answer": [
+        {"id": 1, "text": "Streams data in asynchronously"},
+        {"id": 2,"text": "Streams data in synchronously"},
+        {"id": 3,"text": "Both","correct": true},
+        {"id": 4,"text": "None of above"}
+      ]
+    },
+    {
+      "id": 113,
+      "type": "angular",
+      "question": "What does AOT stand for?",
+      "answer": [
+        {"id": 1, "text": "Ahead-Of-Time Compilation","correct": true},
+        {"id": 2,"text": "Angular Object Templates"},
+        {"id": 3,"text": "Both"},
+        {"id": 4,"text": "None of above"}
+      ]
+    },
+    {
+      "id": 114,
+      "type": "angular",
+      "question": "Which of the following is not a hook application life cycle?",
+      "answer": [
+        {"id": 1, "text": "ng OnChanges"},
+        {"id": 2,"text": "ngViewStart","correct": true},
+        {"id": 3,"text": "ngOnInit"},
+        {"id": 4,"text": "None of the above"}
+      ]
+    },
+    {
+      "id": 115,
+      "type": "angular",
+      "question": "Router is part of which of the following module?",
+      "answer": [
+        {"id": 1, "text": "@angular/core"},
+        {"id": 2,"text": "@angular/router","correct": true},
+        {"id": 3,"text": "Both"},
+        {"id": 4,"text": "None of the above"}
+      ]
+    },
+    {
+      "id": 116,
+      "type": "angular",
+      "question": "RxJS can be used for?",
+      "answer": [
+        {"id": 1, "text": "Browser","correct": true},
+        {"id": 2,"text": "Server Side"},
+        {"id": 3,"text": "Both"},
+        {"id": 4,"text": "None of the above"}
+      ]
+    },
+    {
+      "id": 117,
+      "type": "angular",
+      "question": "Which angular decorator allows us to define the pipe name that is globally available for use in any template in the across application?",
+      "answer": [
+        {"id": 1, "text": "pipeName"},
+        {"id": 2,"text": "pipeDeco"},
+        {"id": 3,"text": "Pipe","correct": true},
+        {"id": 4,"text": "None of the above"}
+      ]
+    },
+    {
+      "id": 118,
+      "type": "angular",
+      "question": "What is the decorator used for configuring your module class?",
+      "answer": [
+        {"id": 1, "text": "@NgModule","correct": true},
+        {"id": 2,"text": "@NgApp"},
+        {"id": 3,"text": "Both"},
+        {"id": 4,"text": "None of the above"}
+      ]
+    },
+    {
+      "id": 119,
+      "type": "angular",
+      "question": "Interpolation in angular is done using",
+      "answer": [
+        {"id": 1, "text": "{{}}","correct": true},
+        {"id": 2,"text": "{{{}}}"},
+        {"id": 3,"text": "{{|var}}"},
+        {"id": 4,"text": "!!!!"}
+      ]
+    },
+    {
+      "id": 120,
+      "type": "angular",
+      "question": "Which of the following filter is used to convert input to all uppercase?",
+      "answer": [
+        {"id": 1, "text": "upper"},
+        {"id": 2,"text": "uppercase","correct": true},
+        {"id": 3,"text": "toUpper"},
+        {"id": 4,"text": "None of the above"}
+      ]
+    },
+    {
+      "id": 121,
+      "type": "angular",
+      "question": "Which of the following is not built-in pipe in Angular?",
+      "answer": [
+        {"id": 1, "text": "DatePipe"},
+        {"id": 2,"text": "CurrencyPipe"},
+        {"id": 3,"text": "DataPipe","correct": true},
+        {"id": 4,"text": "PercentPipe"}
+      ]
+    },
+    {
+      "id": 122,
+      "type": "angular",
+      "question": "What command will create a new Angular app with a root routing module?",
+      "answer": [
+        {"id": 1, "text": "ng new my-dream-app --routing","correct": true},
+        {"id": 2,"text": "ng new my-dream-app --module"},
+        {"id": 3,"text": "ng generate my-dream-app --routing"},
+        {"id": 4,"text": "ng generate my-dream-app"}
+      ]
+    },
+    {
+      "id": 123,
+      "type": "angular",
+      "question": "Where would the following code likely be found in an Angular application? routerLink='/crisis-center'",
+      "answer": [
+        {"id": 1, "text": "In the component metadata"},
+        {"id": 2,"text": "In a service"},
+        {"id": 3,"text": "In the template","correct": true},
+        {"id": 4,"text": "In the component class"}
+      ]
+    },
+    {
+      "id": 124,
+      "type": "angular",
+      "question": "Which Angular CLI flag will not generate unit tests for a component?",
+      "answer": [
+        {"id": 1, "text": "--spec false","correct": true},
+        {"id": 2,"text": "--testing false"},
+        {"id": 3,"text": "--unit-test false"},
+        {"id": 4,"text": "--test false"}
+      ]
+    },
+    {
+      "id": 125,
+      "type": "angular",
+      "question": "Which of the following will map the name of an input parameter 'userData' to a field named 'users'?",
+      "answer": [
+        {"id": 1, "text": "@Input('userData') users","correct": true},
+        {"id": 2,"text": "@Input() userData: users"},
+        {"id": 3,"text": "@Input() users: userData"},
+        {"id": 4,"text": "@Input('users') userData"}
+      ]
     }
 
   ]

@@ -6,11 +6,13 @@ import { MenuPageComponent } from './menu-page/menu-page.component';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxContentLoadingModule } from 'ngx-content-loading';
+import { DialogInfoComponent } from './menu-page/dialog-info/dialog-info.component';
 
 
 @NgModule({
   declarations: [
-    MenuPageComponent
+    MenuPageComponent,
+    DialogInfoComponent
   ],
   imports: [
     CommonModule,

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Menu } from 'src/app/model/menu';
 import { MenuService } from 'src/app/service/menu.service';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { DialogInfoComponent } from './dialog-info/dialog-info.component';
 
 @Component({
   selector: 'app-menu-page',
@@ -14,7 +16,8 @@ export class MenuPageComponent implements OnInit {
   public menuList: Menu[] = [];
   constructor(
     private menuService: MenuService,
-    private router: Router
+    private router: Router,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -27,9 +30,19 @@ export class MenuPageComponent implements OnInit {
     })
   }
   goQuizType(menu:Menu){
-    if(menu.noAction) {return;}
+    if(menu.noAction) {
+      this.openDialogInfo();
+      return;
+    }
     const type = menu.type;
     this.router.navigate(['/question'], {queryParams: {type}})
 
+  }
+
+  openDialogInfo(){
+    this.dialog.open(DialogInfoComponent,{
+      width: '300px',
+      height: '170px'
+    })
   }
 }

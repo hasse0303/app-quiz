@@ -808,8 +808,8 @@
       "answer": [
         {"id": 1, "text": "new keyword"},
         {"id": 2,"text": "object.create()"},
-        {"id": 3,"text": "create.object()"},
-        {"id": 4,"text": "Both a and b", "correct": true}
+        {"id": 4,"text": "Both of the above", "correct": true},
+        {"id": 3,"text": "create.object()"}
       ]
     },
     {
@@ -1043,7 +1043,7 @@
     },
     {
       "id": 96,
-      "type": "node",
+      "type": "node.js",
       "question": "Which of the following command will show all the modules installed globally?",
       "answer": [
         {"id": 1, "text": "$ npm ls -g","correct": true},
@@ -1054,7 +1054,7 @@
     },
     {
       "id": 97,
-      "type": "node",
+      "type": "node.js",
       "question": "Is console a global object?",
       "answer": [
         {"id": 1, "text": "True","correct": true},
@@ -1063,7 +1063,7 @@
     },
     {
       "id": 98,
-      "type": "node",
+      "type": "node.js",
       "question": "Which of the following command will show version of npm?",
       "answer": [
         {"id": 1, "text": "$ npm --version","correct": true},
@@ -1074,7 +1074,7 @@
     },
     {
       "id": 99,
-      "type": "node",
+      "type": "node.js",
       "question": "Node js is a single threaded application but supports concurrency",
       "answer": [
         {"id": 1, "text": "True","correct": true},
@@ -1083,7 +1083,7 @@
     },
     {
       "id": 100,
-      "type": "node",
+      "type": "node.js",
       "question": "All APIs of Node.JS are.",
       "answer": [
         {"id": 1, "text": "Synchronous"},
@@ -1094,7 +1094,7 @@
     },
     {
       "id": 101,
-      "type": "node",
+      "type": "node.js",
       "question": "Node.js runs on _________",
       "answer": [
         {"id": 1, "text": "Client"},
@@ -1105,7 +1105,7 @@
     },
     {
       "id": 102,
-      "type": "node",
+      "type": "node.js",
       "question": "Node.js is __________ by default",
       "answer": [
         {"id": 1, "text": "Synchronous","correct": true},
@@ -1116,7 +1116,7 @@
     },
     {
       "id": 103,
-      "type": "node",
+      "type": "node.js",
       "question": "What is the default scope in Node.js application.",
       "answer": [
         {"id": 1, "text": "Global"},
@@ -1127,7 +1127,7 @@
     },
     {
       "id": 104,
-      "type": "node",
+      "type": "node.js",
       "question": "Node.js application runs on ___________",
       "answer": [
         {"id": 1, "text": "Multiple threads"},
@@ -1138,7 +1138,7 @@
     },
     {
       "id": 105,
-      "type": "node",
+      "type": "node.js",
       "question": "The Node.js modules can be exposed using __________",
       "answer": [
         {"id": 1, "text": "module.expose"},
@@ -1149,7 +1149,7 @@
     },
     {
       "id": 106,
-      "type": "node",
+      "type": "node.js",
       "question": "Which of the following core module is used to create a web server in Node.js?",
       "answer": [
         {"id": 1, "text": "fs"},
@@ -1160,7 +1160,7 @@
     },
     {
       "id": 107,
-      "type": "node",
+      "type": "node.js",
       "question": "How to import module in Node.js?",
       "answer": [
         {"id": 1, "text": " Using require() function","correct": true},
@@ -1171,7 +1171,7 @@
     },
     {
       "id": 108,
-      "type": "node",
+      "type": "node.js",
       "question": "Which of the followings are valid languages for Node.js?",
       "answer": [
         {"id": 1, "text": "JavaScript","correct": true},
@@ -1182,7 +1182,7 @@
     },
     {
       "id": 109,
-      "type": "node",
+      "type": "node.js",
       "question": "Which of the following template engines can be used with Node.js?",
       "answer": [
         {"id": 1, "text": "Jade"},
@@ -1193,7 +1193,7 @@
     },
     {
       "id": 110,
-      "type": "node",
+      "type": "node.js",
       "question": "Node.js application can access which of the following databases?",
       "answer": [
         {"id": 1, "text": "No SQL database"},

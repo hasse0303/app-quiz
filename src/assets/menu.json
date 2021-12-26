@@ -43,13 +43,6 @@
       "image": "https://iconape.com/wp-content/png_logo_vector/typescript.png"
     },
     {
-      "id":7,
-      "shortName": "npm",
-      "fullName": "Node Package Manager",
-      "type": "npm",
-      "image": "https://cdn.freebiesupply.com/logos/thumbs/2x/npm-logo.png"
-    },
-    {
       "id":8,
       "shortName": "node.js",
       "fullName": "Node.js",

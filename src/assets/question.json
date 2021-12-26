@@ -866,6 +866,180 @@
         {"id": 3,"text": "pop()"},
         {"id": 4,"text": "None of the above"}
       ]
+    },
+    {
+      "id": 81,
+      "type": "typescript",
+      "question": "What are the variable scopes available in TypeScript?",
+      "answer": [
+        {"id": 1, "text": "Global Scope"},
+        {"id": 2,"text": "Class Scope"},
+        {"id": 3,"text": "Local Scope"},
+        {"id": 4,"text": "All of the above", "correct": true}
+      ]
+    },
+    {
+      "id": 82,
+      "type": "typescript",
+      "question": "What are the benefits of Typescript?",
+      "answer": [
+        {"id": 1, "text": "It helps in code structuring"},
+        {"id": 2,"text": "Use class based OOP"},
+        {"id": 3,"text": "Impose coding guidelines"},
+        {"id": 4,"text": "All of the above", "correct": true}
+      ]
+    },
+    {
+      "id": 83,
+      "type": "typescript",
+      "question": "Which object oriented terms are supported by Typescript?",
+      "answer": [
+        {"id": 1, "text": "Modules"},
+        {"id": 2,"text": " Classes"},
+        {"id": 3,"text": "Interfaces"},
+        {"id": 4,"text": "All of these", "correct": true}
+      ]
+    },
+    {
+      "id": 84,
+      "type": "typescript",
+      "question": "What are the components of TypeScript?",
+      "answer": [
+        {"id": 1, "text": "TypeScript Language"},
+        {"id": 2,"text": " TypeScript Compiler"},
+        {"id": 3,"text": "TypeScript Language Service"},
+        {"id": 4,"text": "All of these", "correct": true}
+      ]
+    },
+    {
+      "id": 85,
+      "type": "typescript",
+      "question": "What are the types of access modifiers supported by TypeScript?",
+      "answer": [
+        {"id": 1, "text": "Public"},
+        {"id": 2,"text": " Private"},
+        {"id": 3,"text": "Protected"},
+        {"id": 4,"text": "All of these", "correct": true}
+      ]
+    },
+    {
+      "id": 86,
+      "type": "typescript",
+      "question": "When was the first time TypeScript was made public?",
+      "answer": [
+        {"id": 1, "text": "December 2012"},
+        {"id": 2,"text": "October 2012", "correct": true},
+        {"id": 3,"text": "October 2013"},
+        {"id": 4,"text": "November 2013"}
+      ]
+    },
+    {
+      "id": 87,
+      "type": "typescript",
+      "question": "TypeScript is an _______ framework.",
+      "answer": [
+        {"id": 1, "text": "Licensed"},
+        {"id": 2,"text": "Open-sourced", "correct": true},
+        {"id": 3,"text": "Commercial"},
+        {"id": 4,"text": "Both, A and B"}
+      ]
+    },
+    {
+      "id": 88,
+      "type": "typescript",
+      "question": "TypeScript is a typed superset of _______.",
+      "answer": [
+        {"id": 1, "text": "C#"},
+        {"id": 2,"text": "Java", "correct": true},
+        {"id": 3,"text": "Javascript"},
+        {"id": 4,"text": "ReactJS"}
+      ]
+    },
+    {
+      "id": 88,
+      "type": "typescript",
+      "question": "TypeScript is a typed superset of _______.",
+      "answer": [
+        {"id": 1, "text": "C#"},
+        {"id": 2,"text": "Java"},
+        {"id": 3,"text": "Javascript", "correct": true},
+        {"id": 4,"text": "ReactJS"}
+      ]
+    },
+    {
+      "id": 89,
+      "type": "typescript",
+      "question": "TypeScript file compiled _______.",
+      "answer": [
+        {"id": 1, "text": "JavaScript", "correct": true},
+        {"id": 2,"text": "VBScript"},
+        {"id": 3,"text": "TypeScript"},
+        {"id": 4,"text": "None of above"}
+      ]
+    },
+    {
+      "id": 90,
+      "type": "typescript",
+      "question": "TypeScript can be used to write server side and client side applocation.",
+      "answer": [
+        {"id": 1, "text": "True", "correct": true},
+        {"id": 2,"text": "False"}
+      ]
+    },
+    {
+      "id": 91,
+      "type": "typescript",
+      "question": "________ command is used to generate a JavaScript file from a TypeScript file.",
+      "answer": [
+        {"id": 1, "text": "npm filename.ts"},
+        {"id": 2,"text": "tsc fileName.ts", "correct": true},
+        {"id": 3,"text": "tsc-js fileName.ts"},
+        {"id": 4,"text": "All of the above"}
+      ]
+    },
+    {
+      "id": 92,
+      "type": "typescript",
+      "question": "Which of the followings are primitive type supported in TypeScript?",
+      "answer": [
+        {"id": 1, "text": "number"},
+        {"id": 2,"text": "string"},
+        {"id": 3,"text": "bollean"},
+        {"id": 4,"text": "All of the above", "correct": true}
+      ]
+    },
+    {
+      "id": 93,
+      "type": "typescript",
+      "question": "Type assertion in TypeScript is achieved using which of the following syntax?",
+      "answer": [
+        {"id": 1, "text": "Using <type> syntax"},
+        {"id": 2,"text": "Using as syntax"},
+        {"id": 3,"text": "Both of the bove", "correct": true},
+        {"id": 4,"text": "None of the above"}
+      ]
+    },
+    {
+      "id": 94,
+      "type": "typescript",
+      "question": "Which of the following are valid data modifiers in TypeScript?",
+      "answer": [
+        {"id": 1, "text": "public"},
+        {"id": 2,"text": "private"},
+        {"id": 3,"text": "protected"},
+        {"id": 4,"text": "All of the above", "correct": true}
+      ]
+    },
+    {
+      "id": 95,
+      "type": "typescript",
+      "question": "Which of the following keyword is used to declear a module?",
+      "answer": [
+        {"id": 1, "text": "expert","correct": true},
+        {"id": 2,"text": "namespace"},
+        {"id": 3,"text": "type"},
+        {"id": 4,"text": "declare"}
+      ]
     }
 
   ]
